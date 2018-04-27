@@ -27,241 +27,58 @@
     </system>
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="activity_main.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/MainActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Client.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2380">
-              <caret line="119" column="20" lean-forward="false" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1242#1243#0" expanded="true" />
-                <element signature="e#1287#1288#0" expanded="true" />
-                <element signature="e#1351#1352#0" expanded="true" />
-                <element signature="e#1398#1399#0" expanded="true" />
-                <element signature="e#1438#1439#0" expanded="true" />
-                <element signature="e#1469#1470#0" expanded="true" />
-                <element signature="e#1515#1516#0" expanded="true" />
-                <element signature="e#1555#1556#0" expanded="true" />
-                <element signature="e#1585#1586#0" expanded="true" />
-                <element signature="e#1611#1612#0" expanded="true" />
-                <element signature="e#1649#1650#0" expanded="true" />
-                <element signature="e#1679#1680#0" expanded="true" />
-                <element signature="e#1712#1713#0" expanded="true" />
-                <element signature="e#1741#1742#0" expanded="true" />
-                <element signature="e#1785#1786#0" expanded="true" />
-                <element signature="e#1821#1822#0" expanded="true" />
-                <element signature="e#1855#1856#0" expanded="true" />
-                <element signature="e#1885#1886#0" expanded="true" />
-                <element signature="e#1931#1932#0" expanded="true" />
-                <element signature="e#1969#1970#0" expanded="true" />
-                <element signature="e#2005#2006#0" expanded="true" />
-                <element signature="e#2037#2038#0" expanded="true" />
-                <element signature="e#2087#2088#0" expanded="true" />
-                <element signature="e#2129#2130#0" expanded="true" />
-                <element signature="e#2161#2162#0" expanded="true" />
-                <element signature="e#2189#2190#0" expanded="true" />
-                <element signature="e#2231#2232#0" expanded="true" />
-                <element signature="e#2265#2266#0" expanded="true" />
-                <element signature="e#2692#2693#0" expanded="true" />
-                <element signature="e#2716#2717#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Voiture.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Voiture.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
-              <caret line="168" column="18" lean-forward="false" selection-start-line="168" selection-start-column="18" selection-end-line="168" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2055#2056#0" expanded="true" />
-                <element signature="e#2101#2102#0" expanded="true" />
-                <element signature="e#2166#2167#0" expanded="true" />
-                <element signature="e#2214#2215#0" expanded="true" />
-                <element signature="e#2255#2256#0" expanded="true" />
-                <element signature="e#2287#2288#0" expanded="true" />
-                <element signature="e#2335#2336#0" expanded="true" />
-                <element signature="e#2377#2378#0" expanded="true" />
-                <element signature="e#2410#2411#0" expanded="true" />
-                <element signature="e#2439#2440#0" expanded="true" />
-                <element signature="e#2483#2484#0" expanded="true" />
-                <element signature="e#2519#2520#0" expanded="true" />
-                <element signature="e#2552#2553#0" expanded="true" />
-                <element signature="e#2581#2582#0" expanded="true" />
-                <element signature="e#2625#2626#0" expanded="true" />
-                <element signature="e#2661#2662#0" expanded="true" />
-                <element signature="e#2692#2693#0" expanded="true" />
-                <element signature="e#2719#2720#0" expanded="true" />
-                <element signature="e#2759#2760#0" expanded="true" />
-                <element signature="e#2791#2792#0" expanded="true" />
-                <element signature="e#2833#2834#0" expanded="true" />
-                <element signature="e#2871#2872#0" expanded="true" />
-                <element signature="e#3019#3020#0" expanded="true" />
-                <element signature="e#3050#3051#0" expanded="true" />
-                <element signature="e#3095#3096#0" expanded="true" />
-                <element signature="e#3135#3136#0" expanded="true" />
-                <element signature="e#3167#3168#0" expanded="true" />
-                <element signature="e#3198#3199#0" expanded="true" />
-                <element signature="e#3243#3244#0" expanded="true" />
-                <element signature="e#3283#3284#0" expanded="true" />
-                <element signature="e#3322#3323#0" expanded="true" />
-                <element signature="e#3357#3358#0" expanded="true" />
-                <element signature="e#3413#3414#0" expanded="true" />
-                <element signature="e#3461#3462#0" expanded="true" />
-                <element signature="e#3501#3502#0" expanded="true" />
-                <element signature="e#3537#3538#0" expanded="true" />
-                <element signature="e#3596#3597#0" expanded="true" />
-                <element signature="e#3646#3647#0" expanded="true" />
-                <element signature="e#3679#3680#0" expanded="true" />
-                <element signature="e#3710#3711#0" expanded="true" />
-                <element signature="e#3755#3756#0" expanded="true" />
-                <element signature="e#3788#3789#0" expanded="true" />
-                <element signature="e#3839#3840#0" expanded="true" />
-                <element signature="e#3863#3864#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gerant.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Gerant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="90" column="18" lean-forward="false" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#965#966#0" expanded="true" />
-                <element signature="e#1010#1011#0" expanded="true" />
-                <element signature="e#1074#1075#0" expanded="true" />
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1161#1162#0" expanded="true" />
-                <element signature="e#1192#1193#0" expanded="true" />
-                <element signature="e#1238#1239#0" expanded="true" />
-                <element signature="e#1278#1279#0" expanded="true" />
-                <element signature="e#1310#1311#0" expanded="true" />
-                <element signature="e#1338#1339#0" expanded="true" />
-                <element signature="e#1380#1381#0" expanded="true" />
-                <element signature="e#1414#1415#0" expanded="true" />
-                <element signature="e#1451#1452#0" expanded="true" />
-                <element signature="e#1484#1485#0" expanded="true" />
-                <element signature="e#1536#1537#0" expanded="true" />
-                <element signature="e#1580#1581#0" expanded="true" />
-                <element signature="e#1613#1614#0" expanded="true" />
-                <element signature="e#1642#1643#0" expanded="true" />
-                <element signature="e#1686#1687#0" expanded="true" />
-                <element signature="e#1722#1723#0" expanded="true" />
-                <element signature="e#1773#1774#0" expanded="true" />
-                <element signature="e#1797#1798#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Location.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Location.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2800">
-              <caret line="140" column="18" lean-forward="false" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1691#1692#0" expanded="true" />
-                <element signature="e#1738#1739#0" expanded="true" />
-                <element signature="e#1804#1805#0" expanded="true" />
-                <element signature="e#1853#1854#0" expanded="true" />
-                <element signature="e#1895#1896#0" expanded="true" />
-                <element signature="e#1928#1929#0" expanded="true" />
-                <element signature="e#1978#1979#0" expanded="true" />
-                <element signature="e#2022#2023#0" expanded="true" />
-                <element signature="e#2056#2057#0" expanded="true" />
-                <element signature="e#2088#2089#0" expanded="true" />
-                <element signature="e#2136#2137#0" expanded="true" />
-                <element signature="e#2178#2179#0" expanded="true" />
-                <element signature="e#2210#2211#0" expanded="true" />
-                <element signature="e#2240#2241#0" expanded="true" />
-                <element signature="e#2284#2285#0" expanded="true" />
-                <element signature="e#2322#2323#0" expanded="true" />
-                <element signature="e#2358#2359#0" expanded="true" />
-                <element signature="e#2390#2391#0" expanded="true" />
-                <element signature="e#2440#2441#0" expanded="true" />
-                <element signature="e#2482#2483#0" expanded="true" />
-                <element signature="e#2519#2520#0" expanded="true" />
-                <element signature="e#2552#2553#0" expanded="true" />
-                <element signature="e#2604#2605#0" expanded="true" />
-                <element signature="e#2648#2649#0" expanded="true" />
-                <element signature="e#2683#2684#0" expanded="true" />
-                <element signature="e#2714#2715#0" expanded="true" />
-                <element signature="e#2762#2763#0" expanded="true" />
-                <element signature="e#2802#2803#0" expanded="true" />
-                <element signature="e#2835#2836#0" expanded="true" />
-                <element signature="e#2864#2865#0" expanded="true" />
-                <element signature="e#2908#2909#0" expanded="true" />
-                <element signature="e#2944#2945#0" expanded="true" />
-                <element signature="e#2979#2980#0" expanded="true" />
-                <element signature="e#3009#3010#0" expanded="true" />
-                <element signature="e#3056#3057#0" expanded="true" />
-                <element signature="e#3094#3095#0" expanded="true" />
-                <element signature="e#3145#3146#0" expanded="true" />
-                <element signature="e#3169#3170#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AppCompatActivity.java" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/android/support/v7/app/AppCompatActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
-              <folding>
-                <element signature="e#0#22480#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="android-manifest">
-            <state />
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf>
+          <file leaf-file-name="EnregistrerVoitureActivity.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/EnregistrerVoitureActivity.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="540">
+                  <caret line="30" column="125" lean-forward="false" selection-start-line="30" selection-start-column="125" selection-end-line="30" selection-end-column="125" />
+                  <folding>
+                    <element signature="e#714#722#0" expanded="true" />
+                    <element signature="e#1062#1070#0" expanded="true" />
+                    <element signature="e#1399#1407#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="activity_enregistrer_voiture.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enregistrer_voiture.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="333">
+                  <caret line="265" column="42" lean-forward="false" selection-start-line="265" selection-start-column="42" selection-end-line="265" selection-end-column="42" />
+                  <folding>
+                    <element signature="e#509#547#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="activity_enregistrer_voiture.xml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enregistrer_voiture.xml">
+              <provider editor-type-id="android-designer2">
+                <state />
+              </provider>
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="420">
+                  <caret line="136" column="47" lean-forward="true" selection-start-line="136" selection-start-column="47" selection-end-line="136" selection-end-column="47" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -2309,14 +2126,21 @@
         <option value="$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Voiture.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Gerant.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Location.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/AccueilActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_accueil.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_enregistrer_voiture.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/EnregistrerVoitureActivity.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="812" />
-    <option name="y" value="16" />
-    <option name="width" value="992" />
-    <option name="height" value="1048" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -2364,6 +2188,23 @@
             </path>
             <path>
               <item name="LoKaCar" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="LoKaCar" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="LoKaCar" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
+            </path>
+            <path>
+              <item name="LoKaCar" type="1abcf292:AndroidViewProjectNode" />
               <item name="Gradle Scripts" type="ae0cef3a:AndroidBuildScriptsGroupNode" />
             </path>
           </expand>
@@ -2374,8 +2215,18 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="android.sdk-updates" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="android.sdk.path" value="D:/Deploy/Sdk_android_3.1/Sdk_android" />
+    <property name="device.picker.selection" value="Pixel_2_API_25" />
+  </component>
+  <component name="RecentsManager">
+    <key name="android.template.packageName">
+      <recent name="fr.ecole.eni.lokacar" />
+      <recent name="fr.ecole.eni.lokacar.modeles" />
+    </key>
+    <key name="android.template.parentActivityClass">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -2413,7 +2264,7 @@
         <option name="Android.Gradle.BeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App">
+    <configuration name="app" type="AndroidRunConfigurationType" factoryName="Android App" activateToolWindowBeforeRun="false">
       <module name="app" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
@@ -2546,12 +2397,13 @@
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31663114" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2559,8 +2411,8 @@
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16897655" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32963374" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0063965884" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0754717" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -2584,7 +2436,79 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="119" column="20" lean-forward="false" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1242#1243#0" expanded="false" />
+            <element signature="e#1287#1288#0" expanded="false" />
+            <element signature="e#1351#1352#0" expanded="false" />
+            <element signature="e#1398#1399#0" expanded="false" />
+            <element signature="e#1438#1439#0" expanded="false" />
+            <element signature="e#1469#1470#0" expanded="false" />
+            <element signature="e#1515#1516#0" expanded="false" />
+            <element signature="e#1555#1556#0" expanded="false" />
+            <element signature="e#1585#1586#0" expanded="false" />
+            <element signature="e#1611#1612#0" expanded="false" />
+            <element signature="e#1649#1650#0" expanded="false" />
+            <element signature="e#1679#1680#0" expanded="false" />
+            <element signature="e#1712#1713#0" expanded="false" />
+            <element signature="e#1741#1742#0" expanded="false" />
+            <element signature="e#1785#1786#0" expanded="false" />
+            <element signature="e#1821#1822#0" expanded="false" />
+            <element signature="e#1855#1856#0" expanded="false" />
+            <element signature="e#1885#1886#0" expanded="false" />
+            <element signature="e#1931#1932#0" expanded="false" />
+            <element signature="e#1969#1970#0" expanded="false" />
+            <element signature="e#2005#2006#0" expanded="false" />
+            <element signature="e#2037#2038#0" expanded="false" />
+            <element signature="e#2087#2088#0" expanded="false" />
+            <element signature="e#2129#2130#0" expanded="false" />
+            <element signature="e#2161#2162#0" expanded="false" />
+            <element signature="e#2189#2190#0" expanded="false" />
+            <element signature="e#2231#2232#0" expanded="false" />
+            <element signature="e#2265#2266#0" expanded="false" />
+            <element signature="e#2692#2693#0" expanded="false" />
+            <element signature="e#2716#2717#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Gerant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1800">
+          <caret line="90" column="18" lean-forward="false" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#965#966#0" expanded="false" />
+            <element signature="e#1010#1011#0" expanded="false" />
+            <element signature="e#1074#1075#0" expanded="false" />
+            <element signature="e#1121#1122#0" expanded="false" />
+            <element signature="e#1161#1162#0" expanded="false" />
+            <element signature="e#1192#1193#0" expanded="false" />
+            <element signature="e#1238#1239#0" expanded="false" />
+            <element signature="e#1278#1279#0" expanded="false" />
+            <element signature="e#1310#1311#0" expanded="false" />
+            <element signature="e#1338#1339#0" expanded="false" />
+            <element signature="e#1380#1381#0" expanded="false" />
+            <element signature="e#1414#1415#0" expanded="false" />
+            <element signature="e#1451#1452#0" expanded="false" />
+            <element signature="e#1484#1485#0" expanded="false" />
+            <element signature="e#1536#1537#0" expanded="false" />
+            <element signature="e#1580#1581#0" expanded="false" />
+            <element signature="e#1613#1614#0" expanded="false" />
+            <element signature="e#1642#1643#0" expanded="false" />
+            <element signature="e#1686#1687#0" expanded="false" />
+            <element signature="e#1722#1723#0" expanded="false" />
+            <element signature="e#1773#1774#0" expanded="false" />
+            <element signature="e#1797#1798#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/content_main2.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
@@ -2595,15 +2519,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/Main2Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="11" column="39" lean-forward="false" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="39" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
-      </provider>
-      <provider editor-type-id="android-manifest">
-        <state />
       </provider>
     </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.android.support/appcompat-v7/27.1.1/21d073509c5f8d25a1bf274067fa729a1fba8d75/appcompat-v7-27.1.1-sources.jar!/android/support/v7/app/AppCompatActivity.java">
@@ -2611,8 +2532,56 @@
         <state relative-caret-position="192">
           <caret line="60" column="13" lean-forward="false" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
           <folding>
-            <element signature="e#0#22480#0" expanded="true" />
-            <element signature="imports" expanded="true" />
+            <element signature="e#0#22480#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Location.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="16" column="28" lean-forward="false" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1691#1692#0" expanded="false" />
+            <element signature="e#1738#1739#0" expanded="false" />
+            <element signature="e#1804#1805#0" expanded="false" />
+            <element signature="e#1853#1854#0" expanded="false" />
+            <element signature="e#1895#1896#0" expanded="false" />
+            <element signature="e#1928#1929#0" expanded="false" />
+            <element signature="e#1978#1979#0" expanded="false" />
+            <element signature="e#2022#2023#0" expanded="false" />
+            <element signature="e#2056#2057#0" expanded="false" />
+            <element signature="e#2088#2089#0" expanded="false" />
+            <element signature="e#2136#2137#0" expanded="false" />
+            <element signature="e#2178#2179#0" expanded="false" />
+            <element signature="e#2210#2211#0" expanded="false" />
+            <element signature="e#2240#2241#0" expanded="false" />
+            <element signature="e#2284#2285#0" expanded="false" />
+            <element signature="e#2322#2323#0" expanded="false" />
+            <element signature="e#2358#2359#0" expanded="false" />
+            <element signature="e#2390#2391#0" expanded="false" />
+            <element signature="e#2440#2441#0" expanded="false" />
+            <element signature="e#2482#2483#0" expanded="false" />
+            <element signature="e#2519#2520#0" expanded="false" />
+            <element signature="e#2552#2553#0" expanded="false" />
+            <element signature="e#2604#2605#0" expanded="false" />
+            <element signature="e#2648#2649#0" expanded="false" />
+            <element signature="e#2683#2684#0" expanded="false" />
+            <element signature="e#2714#2715#0" expanded="false" />
+            <element signature="e#2762#2763#0" expanded="false" />
+            <element signature="e#2802#2803#0" expanded="false" />
+            <element signature="e#2835#2836#0" expanded="false" />
+            <element signature="e#2864#2865#0" expanded="false" />
+            <element signature="e#2908#2909#0" expanded="false" />
+            <element signature="e#2944#2945#0" expanded="false" />
+            <element signature="e#2979#2980#0" expanded="false" />
+            <element signature="e#3009#3010#0" expanded="false" />
+            <element signature="e#3056#3057#0" expanded="false" />
+            <element signature="e#3094#3095#0" expanded="false" />
+            <element signature="e#3145#3146#0" expanded="false" />
+            <element signature="e#3169#3170#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2620,184 +2589,155 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="220">
-          <caret line="11" column="5" lean-forward="true" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <caret line="11" column="5" lean-forward="false" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="3" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="35" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_afficher_voitures_louees.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/AfficherVoituresDisponiblesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_afficher_voitures_disponibles.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/AfficherVoituresDisponiblesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/AccueilActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="82">
+          <caret line="18" column="0" lean-forward="true" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#842#1096#0" expanded="false" />
+            <element signature="e#1095#1096#0" expanded="false" />
+            <element signature="e#1148#1407#0" expanded="false" />
+            <element signature="e#1406#1407#0" expanded="false" />
+            <element signature="e#1464#1728#0" expanded="false" />
+            <element signature="e#1727#1728#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Client.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_accueil.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
-          <caret line="119" column="20" lean-forward="false" selection-start-line="119" selection-start-column="20" selection-end-line="119" selection-end-column="20" />
+        <state relative-caret-position="460">
+          <caret line="32" column="8" lean-forward="true" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1242#1243#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1351#1352#0" expanded="true" />
-            <element signature="e#1398#1399#0" expanded="true" />
-            <element signature="e#1438#1439#0" expanded="true" />
-            <element signature="e#1469#1470#0" expanded="true" />
-            <element signature="e#1515#1516#0" expanded="true" />
-            <element signature="e#1555#1556#0" expanded="true" />
-            <element signature="e#1585#1586#0" expanded="true" />
-            <element signature="e#1611#1612#0" expanded="true" />
-            <element signature="e#1649#1650#0" expanded="true" />
-            <element signature="e#1679#1680#0" expanded="true" />
-            <element signature="e#1712#1713#0" expanded="true" />
-            <element signature="e#1741#1742#0" expanded="true" />
-            <element signature="e#1785#1786#0" expanded="true" />
-            <element signature="e#1821#1822#0" expanded="true" />
-            <element signature="e#1855#1856#0" expanded="true" />
-            <element signature="e#1885#1886#0" expanded="true" />
-            <element signature="e#1931#1932#0" expanded="true" />
-            <element signature="e#1969#1970#0" expanded="true" />
-            <element signature="e#2005#2006#0" expanded="true" />
-            <element signature="e#2037#2038#0" expanded="true" />
-            <element signature="e#2087#2088#0" expanded="true" />
-            <element signature="e#2129#2130#0" expanded="true" />
-            <element signature="e#2161#2162#0" expanded="true" />
-            <element signature="e#2189#2190#0" expanded="true" />
-            <element signature="e#2231#2232#0" expanded="true" />
-            <element signature="e#2265#2266#0" expanded="true" />
-            <element signature="e#2692#2693#0" expanded="true" />
-            <element signature="e#2716#2717#0" expanded="true" />
+            <element signature="e#262#280#0" expanded="false" />
+            <marker date="1524833658444" expanded="true" signature="891:901" ph="..." />
           </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/AfficherVoituresLoueesActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Voiture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="2460">
           <caret line="168" column="18" lean-forward="false" selection-start-line="168" selection-start-column="18" selection-end-line="168" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="6" column="48" lean-forward="true" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/Deploy/Sdk_android_3.1/Sdk_android/platforms/android-27/data/res/layout/simple_spinner_dropdown_item.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/EnregistrerVoitureActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="30" column="125" lean-forward="false" selection-start-line="30" selection-start-column="125" selection-end-line="30" selection-end-column="125" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2055#2056#0" expanded="true" />
-            <element signature="e#2101#2102#0" expanded="true" />
-            <element signature="e#2166#2167#0" expanded="true" />
-            <element signature="e#2214#2215#0" expanded="true" />
-            <element signature="e#2255#2256#0" expanded="true" />
-            <element signature="e#2287#2288#0" expanded="true" />
-            <element signature="e#2335#2336#0" expanded="true" />
-            <element signature="e#2377#2378#0" expanded="true" />
-            <element signature="e#2410#2411#0" expanded="true" />
-            <element signature="e#2439#2440#0" expanded="true" />
-            <element signature="e#2483#2484#0" expanded="true" />
-            <element signature="e#2519#2520#0" expanded="true" />
-            <element signature="e#2552#2553#0" expanded="true" />
-            <element signature="e#2581#2582#0" expanded="true" />
-            <element signature="e#2625#2626#0" expanded="true" />
-            <element signature="e#2661#2662#0" expanded="true" />
-            <element signature="e#2692#2693#0" expanded="true" />
-            <element signature="e#2719#2720#0" expanded="true" />
-            <element signature="e#2759#2760#0" expanded="true" />
-            <element signature="e#2791#2792#0" expanded="true" />
-            <element signature="e#2833#2834#0" expanded="true" />
-            <element signature="e#2871#2872#0" expanded="true" />
-            <element signature="e#3019#3020#0" expanded="true" />
-            <element signature="e#3050#3051#0" expanded="true" />
-            <element signature="e#3095#3096#0" expanded="true" />
-            <element signature="e#3135#3136#0" expanded="true" />
-            <element signature="e#3167#3168#0" expanded="true" />
-            <element signature="e#3198#3199#0" expanded="true" />
-            <element signature="e#3243#3244#0" expanded="true" />
-            <element signature="e#3283#3284#0" expanded="true" />
-            <element signature="e#3322#3323#0" expanded="true" />
-            <element signature="e#3357#3358#0" expanded="true" />
-            <element signature="e#3413#3414#0" expanded="true" />
-            <element signature="e#3461#3462#0" expanded="true" />
-            <element signature="e#3501#3502#0" expanded="true" />
-            <element signature="e#3537#3538#0" expanded="true" />
-            <element signature="e#3596#3597#0" expanded="true" />
-            <element signature="e#3646#3647#0" expanded="true" />
-            <element signature="e#3679#3680#0" expanded="true" />
-            <element signature="e#3710#3711#0" expanded="true" />
-            <element signature="e#3755#3756#0" expanded="true" />
-            <element signature="e#3788#3789#0" expanded="true" />
-            <element signature="e#3839#3840#0" expanded="true" />
-            <element signature="e#3863#3864#0" expanded="true" />
+            <element signature="e#714#722#0" expanded="true" />
+            <element signature="e#1062#1070#0" expanded="true" />
+            <element signature="e#1399#1407#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Gerant.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="90" column="18" lean-forward="false" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#1010#1011#0" expanded="true" />
-            <element signature="e#1074#1075#0" expanded="true" />
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1192#1193#0" expanded="true" />
-            <element signature="e#1238#1239#0" expanded="true" />
-            <element signature="e#1278#1279#0" expanded="true" />
-            <element signature="e#1310#1311#0" expanded="true" />
-            <element signature="e#1338#1339#0" expanded="true" />
-            <element signature="e#1380#1381#0" expanded="true" />
-            <element signature="e#1414#1415#0" expanded="true" />
-            <element signature="e#1451#1452#0" expanded="true" />
-            <element signature="e#1484#1485#0" expanded="true" />
-            <element signature="e#1536#1537#0" expanded="true" />
-            <element signature="e#1580#1581#0" expanded="true" />
-            <element signature="e#1613#1614#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1686#1687#0" expanded="true" />
-            <element signature="e#1722#1723#0" expanded="true" />
-            <element signature="e#1773#1774#0" expanded="true" />
-            <element signature="e#1797#1798#0" expanded="true" />
-          </folding>
-        </state>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_enregistrer_voiture.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/fr/ecole/eni/lokacar/modeles/Location.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2800">
-          <caret line="140" column="18" lean-forward="false" selection-start-line="140" selection-start-column="18" selection-end-line="140" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1691#1692#0" expanded="true" />
-            <element signature="e#1738#1739#0" expanded="true" />
-            <element signature="e#1804#1805#0" expanded="true" />
-            <element signature="e#1853#1854#0" expanded="true" />
-            <element signature="e#1895#1896#0" expanded="true" />
-            <element signature="e#1928#1929#0" expanded="true" />
-            <element signature="e#1978#1979#0" expanded="true" />
-            <element signature="e#2022#2023#0" expanded="true" />
-            <element signature="e#2056#2057#0" expanded="true" />
-            <element signature="e#2088#2089#0" expanded="true" />
-            <element signature="e#2136#2137#0" expanded="true" />
-            <element signature="e#2178#2179#0" expanded="true" />
-            <element signature="e#2210#2211#0" expanded="true" />
-            <element signature="e#2240#2241#0" expanded="true" />
-            <element signature="e#2284#2285#0" expanded="true" />
-            <element signature="e#2322#2323#0" expanded="true" />
-            <element signature="e#2358#2359#0" expanded="true" />
-            <element signature="e#2390#2391#0" expanded="true" />
-            <element signature="e#2440#2441#0" expanded="true" />
-            <element signature="e#2482#2483#0" expanded="true" />
-            <element signature="e#2519#2520#0" expanded="true" />
-            <element signature="e#2552#2553#0" expanded="true" />
-            <element signature="e#2604#2605#0" expanded="true" />
-            <element signature="e#2648#2649#0" expanded="true" />
-            <element signature="e#2683#2684#0" expanded="true" />
-            <element signature="e#2714#2715#0" expanded="true" />
-            <element signature="e#2762#2763#0" expanded="true" />
-            <element signature="e#2802#2803#0" expanded="true" />
-            <element signature="e#2835#2836#0" expanded="true" />
-            <element signature="e#2864#2865#0" expanded="true" />
-            <element signature="e#2908#2909#0" expanded="true" />
-            <element signature="e#2944#2945#0" expanded="true" />
-            <element signature="e#2979#2980#0" expanded="true" />
-            <element signature="e#3009#3010#0" expanded="true" />
-            <element signature="e#3056#3057#0" expanded="true" />
-            <element signature="e#3094#3095#0" expanded="true" />
-            <element signature="e#3145#3146#0" expanded="true" />
-            <element signature="e#3169#3170#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="420">
+          <caret line="136" column="47" lean-forward="true" selection-start-line="136" selection-start-column="47" selection-end-line="136" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

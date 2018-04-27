@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">LoKaCar</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="voitures_disponibles">Voitures disponibles</string>
+    <string name="voitures_lou_es">Voitures louées</string>
+    <string name="enregistrer_une_voiture">Enregistrer une voiture</string>
+    <string name="enregistrement_de_la_voiture"><u><b><i>Enregistrement de la voiture :</i></b></u></string>
+
 </resources>
