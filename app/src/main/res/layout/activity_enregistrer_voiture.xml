@@ -162,14 +162,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="3"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:onClick="onRadioButtonNbPortesClicked"/>
 
             <RadioButton
                 android:id="@+id/radio_5portes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="5"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:onClick="onRadioButtonNbPortesClicked"/>
         </RadioGroup>
 
     </LinearLayout>
@@ -215,21 +217,24 @@
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/radioGroupClim">
 
             <RadioButton
                 android:id="@+id/radio_ClimOui"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="oui"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:onClick="onRadioButtonClimClicked"/>
 
             <RadioButton
                 android:id="@+id/radio_ClimNon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="non"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:onClick="onRadioButtonClimClicked"/>
         </RadioGroup>
 
     </LinearLayout>
@@ -251,21 +256,24 @@
         <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:id="@+id/radioGroupBoite">
 
             <RadioButton
                 android:id="@+id/radio_vitManuelle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Manuelle"
-                android:layout_marginLeft="10dp"/>
+                android:layout_marginLeft="10dp"
+                android:onClick="onRadioButtonBoiteVitClicked"/>
 
             <RadioButton
                 android:id="@+id/radio_vitAuto"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Automatique"
-                android:layout_marginLeft="20dp"/>
+                android:layout_marginLeft="20dp"
+                android:onClick="onRadioButtonBoiteVitClicked"/>
         </RadioGroup>
 
     </LinearLayout>
@@ -278,7 +286,7 @@
         android:text="Valider"
         android:layout_marginLeft="80dp"
         android:layout_marginRight="80dp"
-        android:onClick="validateForm"/>
+        android:onClick="onBtnValiderFormClicked"/>
 
 
 </LinearLayout>
