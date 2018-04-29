@@ -101,3 +101,10 @@ tmp/
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath
 .project
+\.idea/caches/
+
+\.idea/libraries/
+
+\.idea/
+
+app/app\.iml
