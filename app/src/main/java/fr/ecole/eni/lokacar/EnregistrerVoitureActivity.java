@@ -2,11 +2,18 @@ package fr.ecole.eni.lokacar;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 
 public class EnregistrerVoitureActivity extends AppCompatActivity {
 
+    private EditText txtMarque, txtModele, txtImmatriculation;
+    private RadioGroup radioGroupNbPortes;
+    private Button btnValider;
     private Spinner spinnerNbPlaces;
     private Spinner spinnerMotorisation;
     private Spinner spinnerType;
@@ -30,5 +37,13 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         String[] type = {"SUV","Berline","monospace","sport", "break", "cabriolet"};
         ArrayAdapter<String> adapterType = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, type);
         spinnerType.setAdapter(adapterType);
+
+        btnValider = findViewById(R.id.btnValiderEnregistrementCar);
+    }
+
+    public void validateForm(View view) {
+
+
+
     }
 }
