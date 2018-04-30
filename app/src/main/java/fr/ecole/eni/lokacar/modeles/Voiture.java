@@ -5,7 +5,7 @@ import android.os.Parcelable;
 
 public class Voiture implements Parcelable{
 
-    private int idVoiture;
+    private long idVoiture;
     private String marque;
     private String modele;
     private String type;
@@ -16,7 +16,7 @@ public class Voiture implements Parcelable{
     private boolean climatisation;
     private boolean isManuel;
 
-    public Voiture(int idVoiture, String marque, String modele, String type, String immatriculation, int nbPlaces, int nbPortes, String motorisation, boolean climatisation, boolean isManuel) {
+    public Voiture(long idVoiture, String marque, String modele, String type, String immatriculation, int nbPlaces, int nbPortes, String motorisation, boolean climatisation, boolean isManuel) {
         this.idVoiture = idVoiture;
         this.marque = marque;
         this.modele = modele;
@@ -42,7 +42,7 @@ public class Voiture implements Parcelable{
     }
 
     protected Voiture(Parcel in) {
-        idVoiture = in.readInt();
+        idVoiture = in.readLong();
         marque = in.readString();
         modele = in.readString();
         type = in.readString();
