@@ -1,5 +1,6 @@
 package fr.ecole.eni.lokacar;
 
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -11,8 +12,10 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import java.security.KeyStore;
 import java.text.ParseException;
 
 import fr.ecole.eni.lokacar.modeles.Voiture;
@@ -37,7 +40,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
     private String motorisation;
     private Boolean isClimatisation;
     private Boolean isManuelle;
-    private Boolean isFormCompleted = true;
+    private Boolean isFormCompleted;
 
 
     @Override
@@ -107,7 +110,6 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
                 type = (String) parent.getItemAtPosition(position);
-
             }
 
             @Override
@@ -116,36 +118,81 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
     }
 
     public void onBtnValiderFormClicked(View view) {
 
-        Log.v("caPasse", "ok");
+        isFormCompleted = true;
 
-        marque = txtMarque.getText().toString(); // ask if txtMarque.getText can be null;
+        marque = txtMarque.getText().toString();
 
 
         if (marque == null || marque.isEmpty()) {
             String marqueVide = "Veuillez renseigner la marque";
             Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, marqueVide, Toast.LENGTH_LONG);
+            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+            v.setTextColor(Color.RED);
+            toast.getView().setBackgroundColor(Color.WHITE);
+            toast.show();
             isFormCompleted = false;
         }
 
-        modele = txtMarque.getText().toString();
-        if (modele == null || marque.isEmpty()) {
+
+        modele = txtModele.getText().toString();
+        if (modele == null || modele.isEmpty()) {
             String modeleVide = "Veuillez renseigner le modèle";
             Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, modeleVide, Toast.LENGTH_LONG);
+            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+            v.setTextColor(Color.RED);
+            toast.getView().setBackgroundColor(Color.WHITE);
+            toast.show();
+
             isFormCompleted = false;
         }
 
         immatriculation = txtImmatriculation.getText().toString();
-        if (immatriculation == null || marque.isEmpty()) {
+        if (immatriculation == null || immatriculation.isEmpty()) {
             String immatriculationVide = "Veuillez renseigner l'immatriculation";
             Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, immatriculationVide, Toast.LENGTH_LONG);
+            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+            v.setTextColor(Color.RED);
+            toast.getView().setBackgroundColor(Color.WHITE);
+            toast.show();
+            isFormCompleted = false;
+        }
+
+        if (radioGroupNbPortes.getCheckedRadioButtonId() == -1)
+        {
+            String nbrePortesVide = "Veuillez renseigner le nombre de portes";
+            Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, nbrePortesVide, Toast.LENGTH_LONG);
+            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+            v.setTextColor(Color.RED);
+            toast.getView().setBackgroundColor(Color.WHITE);
+            toast.show();
+            isFormCompleted = false;
+        }
+
+
+        if (radioGroupClimatisation.getCheckedRadioButtonId() == -1)
+        {
+            String climatisationVide = "Veuillez renseigner si vous désirez la climatisation";
+            Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, climatisationVide, Toast.LENGTH_LONG);
+            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+            v.setTextColor(Color.RED);
+            toast.getView().setBackgroundColor(Color.WHITE);
+            toast.show();
+            isFormCompleted = false;
+        }
+
+
+        if (radioGroupBoiteVitesse.getCheckedRadioButtonId() == -1)
+        {
+            String boiteVitesseVide = "Veuillez renseigner le type de boite de vitesse";
+            Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, boiteVitesseVide, Toast.LENGTH_LONG);
+            TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
+            v.setTextColor(Color.RED);
+            toast.getView().setBackgroundColor(Color.WHITE);
+            toast.show();
             isFormCompleted = false;
         }
 
