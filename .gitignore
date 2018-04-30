@@ -101,10 +101,14 @@ tmp/
 # JDT-specific (Eclipse Java Development Tools)     
 .classpath
 .project
-\.idea/caches/
+.idea/caches/
 
-\.idea/libraries/
+.idea/libraries/
 
-\.idea/
+.idea/
 
 app/app\.iml
+
+LoKaCar\.iml
+
+app/src/main/AndroidManifest\.xml

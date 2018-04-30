@@ -7,7 +7,7 @@ public abstract class GerantContract {
 
     public final static String GERANT_CREATE_TABLE = "CREATE TABLE IF NOT EXISTS "
             + "GERANTS ("
-            + "IDGERANT INTEGER PRIMARY KEY, "
+            + "IDGERANT INTEGER PRIMARY KEY AUTOINCREMENT, "
             + "LOGIN TEXT, "
             + "PASSWORD TEXT, "
             + "AGENCE TEXT)";
