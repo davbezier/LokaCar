@@ -43,7 +43,9 @@ public class GerantDAL {
     public long insertOrUpdate(Gerant gerant){
         SQLiteDatabase db = dbGerantHelper.getWritableDatabase();
         long id = -1;
-        Cursor c = db.query(GerantContract.TABLE_GERANT_NAME, null, "IDGERANT="+gerant.getIdGerant(),null,null,null,null);
+        Cursor c = db.query(GerantContract.TABLE_GERANT_NAME, null,
+                "IDGERANT="+gerant.getIdGerant(),null,null,
+                null, null);
 
         if (c.getCount()>0){
             update(id, gerant);
