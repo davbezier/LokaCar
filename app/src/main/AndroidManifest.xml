@@ -16,13 +16,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
-        <activity android:name=".AccueilActivity"/>
+        <activity android:name=".AccueilActivity" />
         <activity android:name=".EnregistrerVoitureActivity" />
         <activity android:name=".AfficherVoituresLoueesActivity" />
-
-        <activity android:name=".AfficherVoituresDisponiblesActivity"></activity>
+        <activity android:name=".AfficherVoituresDisponiblesActivity" />
+        <activity android:name=".EnregistrementClientActivity"></activity>
     </application>
 
 </manifest>

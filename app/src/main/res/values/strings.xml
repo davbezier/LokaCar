@@ -8,5 +8,15 @@
     <string name="login">Login</string>
     <string name="password">Password</string>
     <string name="connexion">Connexion</string>
+    <string name="vehicules_disponibles">Liste des véhicules disponibles</string>
+    <string name="enregistrement_client">Enregistrement d\'un client</string>
+    <string name="voiture">Voiture :</string>
+    <string name="clients_enregistres">Clients enregistrés :</string>
+    <string name="nouveau_client">Nouveau client</string>
+    <string name="nom">Nom :</string>
+    <string name="prenom">Prénom :</string>
+    <string name="adresse">Adresse :</string>
+    <string name="telephone">Téléphone :</string>
+    <string name="email">Email :</string>
 
 </resources>
