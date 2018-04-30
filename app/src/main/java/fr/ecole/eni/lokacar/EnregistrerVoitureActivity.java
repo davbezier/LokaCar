@@ -18,6 +18,7 @@ import android.widget.Toast;
 import java.security.KeyStore;
 import java.text.ParseException;
 
+import fr.ecole.eni.lokacar.bll.VoitureManager;
 import fr.ecole.eni.lokacar.modeles.Voiture;
 
 public class EnregistrerVoitureActivity extends AppCompatActivity {
@@ -41,12 +42,15 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
     private Boolean isClimatisation;
     private Boolean isManuelle;
     private Boolean isFormCompleted;
+    private VoitureManager voitureManager;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enregistrer_voiture);
+
+        voitureManager = new VoitureManager();
 
         txtMarque = findViewById(R.id.txtMarque);
         txtModele = findViewById(R.id.txtModele);
@@ -198,7 +202,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
 
         if (isFormCompleted) {
             Voiture voiture = new Voiture(marque, modele, type, immatriculation, nbPlaces, nbPortes, motorisation, isClimatisation, isManuelle);
-            SaveVoiture(voiture);
+            voitureManager.checkVoiture(voiture);
             Log.v("voiture",voiture.toString());
         }else {
             Log.v("voiture","problème");
@@ -256,8 +260,5 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         }
     }
 
-    public void SaveVoiture(Voiture voiture) {
 
-
-    }
 }
