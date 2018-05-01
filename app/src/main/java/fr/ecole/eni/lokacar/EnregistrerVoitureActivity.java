@@ -33,7 +33,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
     private Spinner spinnerNbPlaces;
     private Spinner spinnerMotorisation;
     private Spinner spinnerType;
-    private Voiture voiture;
+
 
     private String marque;
     private String modele;
@@ -46,7 +46,6 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
     private Boolean isManuelle;
     private Boolean isFormCompleted;
     private VoitureDAL voitureDao;
-
 
 
     @Override
@@ -170,8 +169,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
             isFormCompleted = false;
         }
 
-        if (radioGroupNbPortes.getCheckedRadioButtonId() == -1)
-        {
+        if (radioGroupNbPortes.getCheckedRadioButtonId() == -1) {
             String nbrePortesVide = "Veuillez renseigner le nombre de portes";
             Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, nbrePortesVide, Toast.LENGTH_LONG);
             TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
@@ -182,8 +180,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         }
 
 
-        if (radioGroupClimatisation.getCheckedRadioButtonId() == -1)
-        {
+        if (radioGroupClimatisation.getCheckedRadioButtonId() == -1) {
             String climatisationVide = "Veuillez renseigner si vous désirez la climatisation";
             Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, climatisationVide, Toast.LENGTH_LONG);
             TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
@@ -194,8 +191,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         }
 
 
-        if (radioGroupBoiteVitesse.getCheckedRadioButtonId() == -1)
-        {
+        if (radioGroupBoiteVitesse.getCheckedRadioButtonId() == -1) {
             String boiteVitesseVide = "Veuillez renseigner le type de boite de vitesse";
             Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, boiteVitesseVide, Toast.LENGTH_LONG);
             TextView v = (TextView) toast.getView().findViewById(android.R.id.message);
@@ -207,13 +203,13 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
 
         if (isFormCompleted) {
             //on envoie l'objet en BDD
-            voiture = new Voiture(marque, modele, type, immatriculation, nbPlaces, nbPortes, motorisation, isClimatisation, isManuelle);
-            Log.v("voiture",voiture.toString());
+            Voiture voiture = new Voiture(marque, modele, type, immatriculation, nbPlaces, nbPortes, motorisation, isClimatisation, isManuelle);
+            Log.v("voiture", voiture.toString());
             InsertVoiture insertVoiture = new InsertVoiture();
-            insertVoiture.execute();
+            insertVoiture.execute(voiture);
 
-        }else {
-            Log.v("voiture","problème");
+        } else {
+            Log.v("voiture", "problème");
         }
 
     }
@@ -268,26 +264,29 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         }
     }
 
-    private class InsertVoiture extends AsyncTask<Integer, Integer, Void>{
+    private class InsertVoiture extends AsyncTask<Voiture, Integer, Boolean> {
 
 
         @Override
-        protected Void doInBackground(Integer... integers) {
-
-            voitureDao.insertVoiture(voiture);
-
-
-            return null;
+        protected Boolean doInBackground(Voiture... voitures) {
+            try {
+                voitureDao.insertVoiture(voitures[0]);
+                return true;
+            } catch (Exception e) {
+                return false;
+            }
         }
 
         @Override
-        protected void onPostExecute(Void aVoid) {
-            super.onPostExecute(aVoid);
-            Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, "la voiture a bien été enregistrée", Toast.LENGTH_LONG);
-        }
+        protected void onPostExecute(Boolean isRegistered) {
+            super.onPostExecute(isRegistered);
 
+            if (isRegistered){
+                Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, "la voiture a bien été enregistrée", Toast.LENGTH_LONG);
+            }else{
+                Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, "Problème lors de l'enregistrement de la voiture", Toast.LENGTH_LONG);
+            }
+        }
 
     }
-
-
 }
