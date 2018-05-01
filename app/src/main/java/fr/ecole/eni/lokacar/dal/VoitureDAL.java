@@ -35,9 +35,15 @@ public class VoitureDAL {
     public long insertVoiture(Voiture voiture){
         SQLiteDatabase db = dbVoitureHelper.getWritableDatabase();
 
-        long id = db.insert(GerantContract.TABLE_GERANT_NAME, null, constructValuesDB(voiture));
+        long id = db.insert(VoitureContract.TABLE_VOITURES_NAME, null, constructValuesDB(voiture));
         db.close();
         return id;
+    }
+
+    public void update (long id, Voiture voiture){
+        SQLiteDatabase db = dbVoitureHelper.getWritableDatabase();
+        db.update(VoitureContract.TABLE_VOITURES_NAME, constructValuesDB(voiture), VoitureContract.VOITURE_ID+""+id, null);
+        db.close();
     }
 
 }

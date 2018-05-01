@@ -1,6 +1,8 @@
 package fr.ecole.eni.lokacar;
 
+import android.app.Application;
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -18,7 +20,7 @@ import android.widget.Toast;
 import java.security.KeyStore;
 import java.text.ParseException;
 
-import fr.ecole.eni.lokacar.bll.VoitureManager;
+import fr.ecole.eni.lokacar.dal.VoitureDAL;
 import fr.ecole.eni.lokacar.modeles.Voiture;
 
 public class EnregistrerVoitureActivity extends AppCompatActivity {
@@ -31,6 +33,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
     private Spinner spinnerNbPlaces;
     private Spinner spinnerMotorisation;
     private Spinner spinnerType;
+    private Voiture voiture;
 
     private String marque;
     private String modele;
@@ -42,7 +45,8 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
     private Boolean isClimatisation;
     private Boolean isManuelle;
     private Boolean isFormCompleted;
-    private VoitureManager voitureManager;
+    private VoitureDAL voitureDao;
+
 
 
     @Override
@@ -50,7 +54,8 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enregistrer_voiture);
 
-        voitureManager = new VoitureManager();
+
+        voitureDao = new VoitureDAL(EnregistrerVoitureActivity.this);
 
         txtMarque = findViewById(R.id.txtMarque);
         txtModele = findViewById(R.id.txtModele);
@@ -201,9 +206,12 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         }
 
         if (isFormCompleted) {
-            Voiture voiture = new Voiture(marque, modele, type, immatriculation, nbPlaces, nbPortes, motorisation, isClimatisation, isManuelle);
-            voitureManager.checkVoiture(voiture);
+            //on envoie l'objet en BDD
+            voiture = new Voiture(marque, modele, type, immatriculation, nbPlaces, nbPortes, motorisation, isClimatisation, isManuelle);
             Log.v("voiture",voiture.toString());
+            InsertVoiture insertVoiture = new InsertVoiture();
+            insertVoiture.execute();
+
         }else {
             Log.v("voiture","problème");
         }
@@ -258,6 +266,27 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
                     isManuelle = false;
                 break;
         }
+    }
+
+    private class InsertVoiture extends AsyncTask<Integer, Integer, Void>{
+
+
+        @Override
+        protected Void doInBackground(Integer... integers) {
+
+            voitureDao.insertVoiture(voiture);
+
+
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            super.onPostExecute(aVoid);
+            Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, "la voiture a bien été enregistrée", Toast.LENGTH_LONG);
+        }
+
+
     }
 
 

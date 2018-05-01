@@ -15,7 +15,7 @@ public class VoitureHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(VoitureContract.QUERY_DELETE_TABLE_VOITURES);
+        db.execSQL(VoitureContract.VOITURE_CREATE_TABLE);
     }
 
     @Override
