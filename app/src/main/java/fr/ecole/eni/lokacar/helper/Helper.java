@@ -19,12 +19,8 @@ public class Helper extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(GerantContract.GERANT_CREATE_TABLE);
-<<<<<<< Updated upstream:app/src/main/java/fr/ecole/eni/lokacar/helper/Helper.java
         db.execSQL(VoitureContract.VOITURE_CREATE_TABLE);
         db.execSQL(ClientContract.CLIENT_CREATE_TABLE);
-=======
-
->>>>>>> Stashed changes:app/src/main/java/fr/ecole/eni/lokacar/helper/GerantHelper.java
     }
 
     @Override

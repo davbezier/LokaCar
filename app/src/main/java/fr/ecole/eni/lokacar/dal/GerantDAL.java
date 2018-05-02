@@ -5,27 +5,25 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-<<<<<<< Updated upstream
+
 import fr.ecole.eni.lokacar.helper.Helper;
-=======
+
 import java.util.ArrayList;
 import java.util.List;
 
-import fr.ecole.eni.lokacar.helper.GerantHelper;
->>>>>>> Stashed changes
+
+
 import fr.ecole.eni.lokacar.modeles.Gerant;
 
 public class GerantDAL {
 
-<<<<<<< Updated upstream
-    private Helper dbGerantHelper;
-=======
-    private GerantHelper dbGerantHelper;
+    private Helper helper;
+
     private Context mContext;
->>>>>>> Stashed changes
+
 
     public GerantDAL(Context context){
-        this.dbGerantHelper = new Helper(context);
+        this.helper = new Helper(context);
     }
 
     /**
@@ -35,7 +33,6 @@ public class GerantDAL {
      */
     private ContentValues constructValuesDB(Gerant gerant) {
         ContentValues values = new ContentValues();
-        values.put(GerantContract.GERANT_ID, gerant.getIdGerant());
         values.put(GerantContract.LOGIN, gerant.getLogin());
         values.put(GerantContract.PASSWORD,gerant.getMotDePasse());
         values.put(GerantContract.AGENCE,gerant.getAgence());
@@ -43,7 +40,7 @@ public class GerantDAL {
     }
 
     public long insertGerant(Gerant gerant){
-        SQLiteDatabase db = dbGerantHelper.getWritableDatabase();
+        SQLiteDatabase db = helper.getWritableDatabase();
 
         long id = db.insert(GerantContract.TABLE_GERANT_NAME, null, constructValuesDB(gerant));
 
@@ -53,7 +50,7 @@ public class GerantDAL {
     }
 
     public long insertOrUpdate(Gerant gerant){
-        SQLiteDatabase db = dbGerantHelper.getWritableDatabase();
+        SQLiteDatabase db = helper.getWritableDatabase();
         long id = -1;
         Cursor c = db.query(GerantContract.TABLE_GERANT_NAME, null,
                 "IDGERANT="+gerant.getIdGerant(),null,null,
@@ -69,37 +66,25 @@ public class GerantDAL {
     }
 
     public void update(long id, Gerant gerant){
-        SQLiteDatabase db = dbGerantHelper.getWritableDatabase();
+        SQLiteDatabase db = helper.getWritableDatabase();
         db.update(GerantContract.TABLE_GERANT_NAME, constructValuesDB(gerant),
                 "IDGERANT="+id,
                 null);
         db.close();
     }
 
-    public List<Gerant> getListeByLoginPassword(String login, String password) {
-        SQLiteDatabase db = dbGerantHelper.getReadableDatabase();
-        Cursor cursor = db.query(GerantContract.TABLE_GERANT_NAME,
-                null,
-                GerantContract.LOGIN+"=? AND " + GerantContract.PASSWORD+"=?",
-                new String[]{login, password},
-                null,
-                null,
-                null);
 
-        List<Gerant> objects = new ArrayList<Gerant>();
+    public boolean validerConnexion(String login, String password){
 
-        if (cursor != null && cursor.moveToFirst()){
-            do {
-                long id = cursor.getLong(cursor.getColumnIndex(GerantContract.GERANT_ID));
-                String loginGerant = cursor.getString(cursor.getColumnIndex(GerantContract.LOGIN));
-                String passwordGerant = cursor.getString(cursor.getColumnIndex(GerantContract.PASSWORD));
-                String agenceGerant = cursor.getString(cursor.getColumnIndex(GerantContract.AGENCE));
-            } while (cursor.moveToNext());
-
-            cursor.close();
+        SQLiteDatabase db = helper.getReadableDatabase();
+        Cursor cursor = db.rawQuery("SELECT * FROM "+GerantContract.TABLE_GERANT_NAME+" WHERE "+GerantContract.LOGIN+"='"+login
+                +"' AND "+GerantContract.PASSWORD+"='"+password+"'",null);
+        if (cursor.getCount()>0){
+            db.close();
+            return true;
         }
-
-        return objects;
+        db.close();
+        return false;
     }
 
 

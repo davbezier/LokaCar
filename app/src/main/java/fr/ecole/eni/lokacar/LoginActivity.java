@@ -45,14 +45,7 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mGerant = new Gerant("gerant1", "mdp", "Nantes");
-<<<<<<< Updated upstream
-      //  mGerantDAL = new GerantDAL(LoginActivity.this);
-       // mGerantDAL.insertGerant(mGerant);
-=======
         mGerantDAL = new GerantDAL(LoginActivity.this);
-        //mGerantDAL.insertGerant(mGerant);
->>>>>>> Stashed changes
 
 
         System.out.println(mGerant);
@@ -67,7 +60,7 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (mLoginView.getText().toString().equals(mGerant.getLogin()) && mPasswordView.getText().toString().equals(mGerant.getMotDePasse())) {
+                if (mGerantDAL.validerConnexion(mLoginView.getText().toString(), mPasswordView.getText().toString())) {
 
                     Intent intent = new Intent(LoginActivity.this, AccueilActivity.class);
                     startActivity(intent);
