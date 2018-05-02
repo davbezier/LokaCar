@@ -28,6 +28,18 @@ public class Location implements Parcelable {
         this.isRendu = isRendu;
     }
 
+    public Location(long idLocation, String dateDebut, String dateFin, double prixTotal, String photoDebut, String photoFin, Client client, Voiture voiture, boolean isRendu) {
+        this.idLocation = idLocation;
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.prixTotal = prixTotal;
+        this.photoDebut = photoDebut;
+        this.photoFin = photoFin;
+        this.client = client;
+        this.voiture = voiture;
+        this.isRendu = isRendu;
+    }
+
     protected Location(Parcel in) {
         idLocation = in.readLong();
         dateDebut = in.readString();

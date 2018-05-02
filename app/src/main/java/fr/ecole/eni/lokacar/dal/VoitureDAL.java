@@ -1,5 +1,6 @@
 package fr.ecole.eni.lokacar.dal;
 
+import android.app.Application;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -8,16 +9,21 @@ import android.database.sqlite.SQLiteDatabase;
 import java.util.ArrayList;
 import java.util.List;
 
+import fr.ecole.eni.lokacar.AccueilActivity;
+import fr.ecole.eni.lokacar.AfficherVoituresDisponiblesActivity;
 import fr.ecole.eni.lokacar.helper.Helper;
 
+import fr.ecole.eni.lokacar.modeles.Location;
 import fr.ecole.eni.lokacar.modeles.Voiture;
 
 public class VoitureDAL {
 
     private Helper dbVoitureHelper;
+    private Context context;
 
     public VoitureDAL(Context context){
         dbVoitureHelper = new Helper(context);
+        this.context = context;
     }
 
     private ContentValues constructValuesDB(Voiture voiture){
@@ -91,13 +97,28 @@ public class VoitureDAL {
         return objects;
     }
 
-    public List<Voiture>getAllVoituresLouees(){
+    public List<Voiture> getAllvoituresNonLouees(){
 
-        SQLiteDatabase db = dbVoitureHelper.getReadableDatabase();
+        List<Voiture> allVoituresNonLouees = new ArrayList<>();
 
+        List<Voiture> allVoitures = this.getAllVoiture();
 
+        LocationDAL locationDAL = new LocationDAL(context);
 
-        return null;
+        List<Location> allLocationsVoituresLouees = locationDAL.getAllLocationsWithVoituresNonRendues();
+
+        for (Voiture voiture : allVoitures){
+
+           for(Location location : allLocationsVoituresLouees){
+
+               if (voiture.getIdVoiture() != location.getVoiture().getIdVoiture()){
+                   allVoituresNonLouees.add(voiture);
+               }
+           }
+        }
+
+        return  allVoituresNonLouees;
     }
+
 
 }
