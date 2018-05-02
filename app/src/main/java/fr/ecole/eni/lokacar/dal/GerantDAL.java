@@ -5,15 +5,15 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import fr.ecole.eni.lokacar.helper.GerantHelper;
+import fr.ecole.eni.lokacar.helper.Helper;
 import fr.ecole.eni.lokacar.modeles.Gerant;
 
 public class GerantDAL {
 
-    private GerantHelper dbGerantHelper;
+    private Helper dbGerantHelper;
 
     public GerantDAL(Context context){
-        this.dbGerantHelper = new GerantHelper(context);
+        this.dbGerantHelper = new Helper(context);
     }
 
     /**

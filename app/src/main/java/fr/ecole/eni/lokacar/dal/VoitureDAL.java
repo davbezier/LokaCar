@@ -4,15 +4,16 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
-import fr.ecole.eni.lokacar.helper.VoitureHelper;
+import fr.ecole.eni.lokacar.helper.Helper;
+
 import fr.ecole.eni.lokacar.modeles.Voiture;
 
 public class VoitureDAL {
 
-    private VoitureHelper dbVoitureHelper;
+    private Helper dbVoitureHelper;
 
     public VoitureDAL(Context context){
-        dbVoitureHelper = new VoitureHelper(context);
+        dbVoitureHelper = new Helper(context);
     }
 
     private ContentValues constructValuesDB(Voiture voiture){

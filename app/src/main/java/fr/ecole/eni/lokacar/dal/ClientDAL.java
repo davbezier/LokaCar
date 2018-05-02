@@ -5,15 +5,15 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
-import fr.ecole.eni.lokacar.helper.ClientHelper;
+import fr.ecole.eni.lokacar.helper.Helper;
 import fr.ecole.eni.lokacar.modeles.Client;
 
 public class ClientDAL {
 
-    private ClientHelper dbClientHelper;
+    private Helper dbClientHelper;
 
     public ClientDAL (Context context) {
-        this.dbClientHelper = new ClientHelper(context);
+        this.dbClientHelper = new Helper(context);
     }
 
     private ContentValues mContentValues (Client client) {
