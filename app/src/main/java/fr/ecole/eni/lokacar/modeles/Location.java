@@ -5,19 +5,19 @@ import android.os.Parcelable;
 
 import java.util.Date;
 
-public class Location implements Parcelable{
+public class Location implements Parcelable {
 
     private long idLocation;
-    private Date dateDebut;
-    private Date dateFin;
+    private String dateDebut;
+    private String dateFin;
     private double prixTotal;
     private String photoDebut;
     private String photoFin;
     private Client client;
     private Voiture voiture;
+    private boolean isRendu;
 
-    public Location(long idLocation, Date dateDebut, Date dateFin, double prixTotal, String photoDebut, String photoFin, Client client, Voiture voiture) {
-        this.idLocation = idLocation;
+    public Location(String dateDebut, String dateFin, double prixTotal, String photoDebut, String photoFin, Client client, Voiture voiture, boolean isRendu) {
         this.dateDebut = dateDebut;
         this.dateFin = dateFin;
         this.prixTotal = prixTotal;
@@ -25,25 +25,19 @@ public class Location implements Parcelable{
         this.photoFin = photoFin;
         this.client = client;
         this.voiture = voiture;
-    }
-
-    public Location(Date dateDebut, Date dateFin, double prixTotal, String photoDebut, String photoFin, Client client, Voiture voiture) {
-        this.dateDebut = dateDebut;
-        this.dateFin = dateFin;
-        this.prixTotal = prixTotal;
-        this.photoDebut = photoDebut;
-        this.photoFin = photoFin;
-        this.client = client;
-        this.voiture = voiture;
+        this.isRendu = isRendu;
     }
 
     protected Location(Parcel in) {
         idLocation = in.readLong();
+        dateDebut = in.readString();
+        dateFin = in.readString();
         prixTotal = in.readDouble();
         photoDebut = in.readString();
         photoFin = in.readString();
         client = in.readParcelable(Client.class.getClassLoader());
         voiture = in.readParcelable(Voiture.class.getClassLoader());
+        isRendu = in.readByte() != 0;
     }
 
     public static final Creator<Location> CREATOR = new Creator<Location>() {
@@ -66,19 +60,19 @@ public class Location implements Parcelable{
         this.idLocation = idLocation;
     }
 
-    public Date getDateDebut() {
+    public String getDateDebut() {
         return dateDebut;
     }
 
-    public void setDateDebut(Date dateDebut) {
+    public void setDateDebut(String dateDebut) {
         this.dateDebut = dateDebut;
     }
 
-    public Date getDateFin() {
+    public String getDateFin() {
         return dateFin;
     }
 
-    public void setDateFin(Date dateFin) {
+    public void setDateFin(String dateFin) {
         this.dateFin = dateFin;
     }
 
@@ -122,6 +116,14 @@ public class Location implements Parcelable{
         this.voiture = voiture;
     }
 
+    public boolean isRendu() {
+        return isRendu;
+    }
+
+    public void setRendu(boolean rendu) {
+        isRendu = rendu;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -130,24 +132,28 @@ public class Location implements Parcelable{
     @Override
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeLong(idLocation);
+        dest.writeString(dateDebut);
+        dest.writeString(dateFin);
         dest.writeDouble(prixTotal);
         dest.writeString(photoDebut);
         dest.writeString(photoFin);
         dest.writeParcelable(client, flags);
         dest.writeParcelable(voiture, flags);
+        dest.writeByte((byte) (isRendu ? 1 : 0));
     }
 
     @Override
     public String toString() {
         return "Location{" +
                 "idLocation=" + idLocation +
-                ", dateDebut=" + dateDebut +
-                ", dateFin=" + dateFin +
+                ", dateDebut='" + dateDebut + '\'' +
+                ", dateFin='" + dateFin + '\'' +
                 ", prixTotal=" + prixTotal +
                 ", photoDebut='" + photoDebut + '\'' +
                 ", photoFin='" + photoFin + '\'' +
                 ", client=" + client +
                 ", voiture=" + voiture +
+                ", isRendu=" + isRendu +
                 '}';
     }
 }

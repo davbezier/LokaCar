@@ -91,4 +91,13 @@ public class VoitureDAL {
         return objects;
     }
 
+    public List<Voiture>getAllVoituresLouees(){
+
+        SQLiteDatabase db = dbVoitureHelper.getReadableDatabase();
+
+
+
+        return null;
+    }
+
 }

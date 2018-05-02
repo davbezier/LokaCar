@@ -9,5 +9,13 @@ public class AfficherVoituresLoueesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afficher_voitures_louees);
+
+        // on va récupérer la liste des voitures louées en BDD
+
+
+
+
+
+
     }
 }
