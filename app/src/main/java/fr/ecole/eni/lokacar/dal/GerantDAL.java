@@ -5,12 +5,24 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+<<<<<<< Updated upstream
 import fr.ecole.eni.lokacar.helper.Helper;
+=======
+import java.util.ArrayList;
+import java.util.List;
+
+import fr.ecole.eni.lokacar.helper.GerantHelper;
+>>>>>>> Stashed changes
 import fr.ecole.eni.lokacar.modeles.Gerant;
 
 public class GerantDAL {
 
+<<<<<<< Updated upstream
     private Helper dbGerantHelper;
+=======
+    private GerantHelper dbGerantHelper;
+    private Context mContext;
+>>>>>>> Stashed changes
 
     public GerantDAL(Context context){
         this.dbGerantHelper = new Helper(context);
@@ -62,6 +74,32 @@ public class GerantDAL {
                 "IDGERANT="+id,
                 null);
         db.close();
+    }
+
+    public List<Gerant> getListeByLoginPassword(String login, String password) {
+        SQLiteDatabase db = dbGerantHelper.getReadableDatabase();
+        Cursor cursor = db.query(GerantContract.TABLE_GERANT_NAME,
+                null,
+                GerantContract.LOGIN+"=? AND " + GerantContract.PASSWORD+"=?",
+                new String[]{login, password},
+                null,
+                null,
+                null);
+
+        List<Gerant> objects = new ArrayList<Gerant>();
+
+        if (cursor != null && cursor.moveToFirst()){
+            do {
+                long id = cursor.getLong(cursor.getColumnIndex(GerantContract.GERANT_ID));
+                String loginGerant = cursor.getString(cursor.getColumnIndex(GerantContract.LOGIN));
+                String passwordGerant = cursor.getString(cursor.getColumnIndex(GerantContract.PASSWORD));
+                String agenceGerant = cursor.getString(cursor.getColumnIndex(GerantContract.AGENCE));
+            } while (cursor.moveToNext());
+
+            cursor.close();
+        }
+
+        return objects;
     }
 
 

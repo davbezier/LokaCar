@@ -20,4 +20,6 @@ public abstract class GerantContract {
     public final static String PASSWORD = "PASSWORD";
     public final static String AGENCE = "AGENCE";
 
+
+
 }

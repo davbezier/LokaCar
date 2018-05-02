@@ -46,8 +46,13 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         mGerant = new Gerant("gerant1", "mdp", "Nantes");
+<<<<<<< Updated upstream
       //  mGerantDAL = new GerantDAL(LoginActivity.this);
        // mGerantDAL.insertGerant(mGerant);
+=======
+        mGerantDAL = new GerantDAL(LoginActivity.this);
+        //mGerantDAL.insertGerant(mGerant);
+>>>>>>> Stashed changes
 
 
         System.out.println(mGerant);
