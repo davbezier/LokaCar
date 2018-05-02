@@ -51,17 +51,17 @@ public class VoitureDAL {
         db.close();
     }
 
-    public List<Voiture> getAllVoiture(String marqueModele){
+    public List<Voiture> getAllVoiture(){
 
         SQLiteDatabase db = dbVoitureHelper.getReadableDatabase();
 
         Cursor cursor = db.query(VoitureContract.TABLE_VOITURES_NAME,
                 null,
-                VoitureContract.MARQUE+"=?",
-                new String[]{marqueModele},
                 null,
                 null,
-                VoitureContract.MODELE);
+                null,
+                null,
+                VoitureContract.MARQUE);
 
         List<Voiture> objects = new ArrayList<>();
 

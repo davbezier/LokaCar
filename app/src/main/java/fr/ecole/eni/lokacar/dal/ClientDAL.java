@@ -5,6 +5,9 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import fr.ecole.eni.lokacar.helper.Helper;
 import fr.ecole.eni.lokacar.modeles.Client;
 
@@ -63,6 +66,37 @@ public class ClientDAL {
                 "IDGERANT="+id,
                 null);
         db.close();
+    }
+
+    public List<Client> getAllClient(){
+        SQLiteDatabase db = dbClientHelper.getReadableDatabase();
+
+        Cursor cursor = db.query(ClientContract.TABLE_CLIENT_NAME,
+                null,
+                null,
+                null,
+                null,
+                null,
+                null);
+
+        List<Client> objects = new ArrayList<>();
+
+        if (cursor != null && cursor.moveToFirst()){
+            do {
+                long id = cursor.getLong(cursor.getColumnIndex(ClientContract.CLIENTS_ID));
+                String nomClient = cursor.getString(cursor.getColumnIndex(ClientContract.NOM));
+                String prenomClient = cursor.getString(cursor.getColumnIndex(ClientContract.PRENOM));
+                String adresseClient = cursor.getString(cursor.getColumnIndex(ClientContract.ADRESSE));
+                String telephoneClient = cursor.getString(cursor.getColumnIndex(ClientContract.TELEPHONE));
+                String emailClient = cursor.getString(cursor.getColumnIndex(ClientContract.EMAIL));
+
+                objects.add(new Client(id, nomClient, prenomClient, adresseClient, telephoneClient, emailClient));
+            } while (cursor.moveToNext());
+
+            cursor.close();
+        }
+
+        return objects;
     }
 
 }

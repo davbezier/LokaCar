@@ -46,20 +46,19 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
+       // mGerant = new Gerant("gerant2", "mdp", "Paris");
+
         mGerantDAL = new GerantDAL(LoginActivity.this);
+       // mGerantDAL.insertGerant(mGerant);
 
 
-        mGerant = new Gerant("gerant1", "mdp", "Nantes");
-       // mGerantDAL = new GerantDAL(LoginActivity.this);
-     //   mGerantDAL.insertGerant(mGerant);
 
 
-        System.out.println(mGerant);
         mLoginView = (AutoCompleteTextView) findViewById(R.id.login);
         mPasswordView = (EditText) findViewById(R.id.password);
 
-        mLoginFormView = findViewById(R.id.login_form);
-        mProgressView = findViewById(R.id.login_page);
+        mLoginFormView = (View) findViewById(R.id.login_form);
+        mProgressView = (View) findViewById(R.id.login_page);
 
         Button mSignIn = (Button) findViewById(R.id.sign_in);
         mSignIn.setOnClickListener(new View.OnClickListener() {

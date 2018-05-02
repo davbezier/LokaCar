@@ -10,7 +10,7 @@
     <string name="connexion">Connexion</string>
     <string name="vehicules_disponibles">Liste des véhicules disponibles</string>
     <string name="enregistrement_client">Enregistrement d\'un client</string>
-    <string name="voiture">Voiture :</string>
+    <string name="voiture">Voiture</string>
     <string name="clients_enregistres">Clients enregistrés :</string>
     <string name="nouveau_client">Nouveau client</string>
     <string name="nom">Nom :</string>
@@ -18,9 +18,22 @@
     <string name="adresse">Adresse :</string>
     <string name="telephone">Téléphone :</string>
     <string name="email">Email :</string>
+
     <string name="oui">oui</string>
     <string name="non">non</string>
     <string name="repNon">non</string>
     <string name="v_hicules_lou_s">Véhicules loués</string>
+
+    <string name="enregistrer">ENREGISTRER</string>
+    <string name="marque">Marque</string>
+    <string name="modele">Modele</string>
+    <string name="type">Type</string>
+    <string name="immatriculation">Immatriculation</string>
+    <string name="nbplace">NbPlace</string>
+    <string name="nbporte">NbPorte</string>
+    <string name="motorisation">Motorisation</string>
+    <string name="climatisation">Climatisation</string>
+    <string name="boite_de_vitesse">Boite de vitesse</string>
+
 
 </resources>
