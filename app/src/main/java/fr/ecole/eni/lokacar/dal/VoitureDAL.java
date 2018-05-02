@@ -2,7 +2,11 @@ package fr.ecole.eni.lokacar.dal;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import fr.ecole.eni.lokacar.helper.Helper;
 
@@ -45,6 +49,46 @@ public class VoitureDAL {
         SQLiteDatabase db = dbVoitureHelper.getWritableDatabase();
         db.update(VoitureContract.TABLE_VOITURES_NAME, constructValuesDB(voiture), VoitureContract.VOITURE_ID+""+id, null);
         db.close();
+    }
+
+    public List<Voiture> getAllVoiture(String marqueModele){
+
+        SQLiteDatabase db = dbVoitureHelper.getReadableDatabase();
+
+        Cursor cursor = db.query(VoitureContract.TABLE_VOITURES_NAME,
+                null,
+                VoitureContract.MARQUE+"=?",
+                new String[]{marqueModele},
+                null,
+                null,
+                VoitureContract.MODELE);
+
+        List<Voiture> objects = new ArrayList<>();
+
+        if (cursor != null && cursor.moveToFirst()){
+            do {
+                long id = cursor.getLong(cursor.getColumnIndex(VoitureContract.VOITURE_ID));
+                String marqueVoiture = cursor.getString(cursor.getColumnIndex(VoitureContract.MARQUE));
+                String modeleVoiture = cursor.getString(cursor.getColumnIndex(VoitureContract.MODELE));
+                String typeVoiture = cursor.getString(cursor.getColumnIndex(VoitureContract.TYPE));
+                String immatriculationVoiture = cursor.getString(cursor.getColumnIndex(VoitureContract.IMMATRICULATION));
+                int nbPlaceVoiture = cursor.getInt(cursor.getColumnIndex(VoitureContract.NBPLACES));
+                int nbPorteVoiture = cursor.getInt(cursor.getColumnIndex(VoitureContract.NBPORTES));
+                String motorisationVoiture = cursor.getString(cursor.getColumnIndex(VoitureContract.MOTORISATION));
+                boolean climatisationVoiture = (cursor.getInt(cursor.getColumnIndex(VoitureContract.CLIMATISATION))>1);
+                boolean isManuel = (cursor.getInt(cursor.getColumnIndex(VoitureContract.ISMANUEL))>1);
+
+                objects.add(new Voiture(id, marqueVoiture,
+                        modeleVoiture, typeVoiture,
+                        immatriculationVoiture, nbPlaceVoiture,
+                        nbPorteVoiture, motorisationVoiture,
+                        climatisationVoiture, isManuel));
+            } while (cursor.moveToNext());
+
+            cursor.close();
+        }
+
+        return objects;
     }
 
 }
