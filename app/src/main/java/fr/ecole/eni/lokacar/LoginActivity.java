@@ -45,7 +45,13 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+
         mGerantDAL = new GerantDAL(LoginActivity.this);
+
+
+        mGerant = new Gerant("gerant1", "mdp", "Nantes");
+       // mGerantDAL = new GerantDAL(LoginActivity.this);
+     //   mGerantDAL.insertGerant(mGerant);
 
 
         System.out.println(mGerant);
@@ -65,7 +71,7 @@ public class LoginActivity extends AppCompatActivity {
                     Intent intent = new Intent(LoginActivity.this, AccueilActivity.class);
                     startActivity(intent);
                 } else {
-                    Toast toast = Toast.makeText(LoginActivity.this, "Login ou mot de passe incorrect",Toast.LENGTH_LONG);
+                    Toast toast = Toast.makeText(LoginActivity.this, "Login ou mot de passe incorrect", Toast.LENGTH_LONG);
                     TextView toastTextView = (TextView) toast.getView().findViewById(android.R.id.message);
                     toastTextView.setTextColor(Color.RED);
                     toast.getView().setBackgroundColor(Color.WHITE);

@@ -18,7 +18,7 @@ public class VoitureDAL {
 
     private ContentValues constructValuesDB(Voiture voiture){
         ContentValues values = new ContentValues();
-        values.put(VoitureContract.VOITURE_ID, voiture.getIdVoiture());
+        //values.put(VoitureContract.VOITURE_ID, voiture.getIdVoiture());
         values.put(VoitureContract.MARQUE, voiture.getMarque());
         values.put(VoitureContract.MODELE, voiture.getModele());
         values.put(VoitureContract.TYPE, voiture.getType());

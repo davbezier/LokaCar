@@ -1,8 +1,11 @@
 package fr.ecole.eni.lokacar;
 
+import android.app.AlertDialog;
 import android.app.Application;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.os.AsyncTask;
+import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,8 +34,11 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
             radioButtonClimatisationNon, radioButtonBoiteManuelle, radioButtonBoiteAuto;
 
     private Spinner spinnerNbPlaces;
+    ArrayAdapter<String> adapterSpinnerNbPlaces;
     private Spinner spinnerMotorisation;
+    ArrayAdapter<String> adapterMotorisation;
     private Spinner spinnerType;
+    ArrayAdapter<String> adapterType;
 
 
     private String marque;
@@ -72,7 +78,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         spinnerNbPlaces = findViewById(R.id.spinnerNbPplaces);
 
         final String[] listNbplaces = {"2", "3", "5", "8"};
-        ArrayAdapter<String> adapterSpinnerNbPlaces = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listNbplaces);
+        adapterSpinnerNbPlaces = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listNbplaces);
         spinnerNbPlaces.setAdapter(adapterSpinnerNbPlaces);
         spinnerNbPlaces.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -96,7 +102,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
 
         spinnerMotorisation = findViewById(R.id.spinnerMotorisation);
         String[] listeMotorisation = {"essence", "diesel", "hybride", "électrique"};
-        ArrayAdapter<String> adapterMotorisation = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listeMotorisation);
+        adapterMotorisation = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listeMotorisation);
         spinnerMotorisation.setAdapter(adapterMotorisation);
         spinnerMotorisation.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -112,7 +118,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
 
         spinnerType = findViewById(R.id.spinnerType);
         String[] listeType = {"berline", "SUV", "monospace", "sport", "break", "cabriolet"};
-        ArrayAdapter<String> adapterType = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listeType);
+        adapterType = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_dropdown_item, listeType);
         spinnerType.setAdapter(adapterType);
         spinnerType.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -281,12 +287,49 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         protected void onPostExecute(Boolean isRegistered) {
             super.onPostExecute(isRegistered);
 
-            if (isRegistered){
-                Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, "la voiture a bien été enregistrée", Toast.LENGTH_LONG);
-            }else{
+            if (isRegistered) {
+
+                AlertDialog.Builder builder;
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+                    builder = new AlertDialog.Builder(EnregistrerVoitureActivity.this, android.R.style.Theme_Material_Dialog_Alert);
+                } else {
+                    builder = new AlertDialog.Builder(EnregistrerVoitureActivity.this);
+                }
+                builder.setTitle("Enregistrement réussi")
+                        .setMessage("Souhaitez vous enregistrer une nouvelle voiture?")
+                        .setPositiveButton("oui", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                // on remet le formulaire à zéro
+
+                                resetForm();
+                            }
+                        })
+                        .setNegativeButton("non", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int which) {
+                                //on ferme l'activité et on retourne à l'écran d'accueil
+                                EnregistrerVoitureActivity.this.finish();
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
+            } else {
                 Toast toast = Toast.makeText(EnregistrerVoitureActivity.this, "Problème lors de l'enregistrement de la voiture", Toast.LENGTH_LONG);
+                toast.show();
             }
         }
 
+    }
+
+    public void resetForm() {
+        txtMarque.setText("");
+        txtModele.setText("");
+        txtImmatriculation.setText("");
+        radioGroupNbPortes.clearCheck();
+        radioGroupClimatisation.clearCheck();
+        radioGroupBoiteVitesse.clearCheck();
+        spinnerType.setAdapter(adapterType);
+        spinnerNbPlaces.setAdapter(adapterSpinnerNbPlaces);
+        spinnerMotorisation.setAdapter(adapterMotorisation);
     }
 }

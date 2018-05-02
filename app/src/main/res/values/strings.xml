@@ -18,5 +18,8 @@
     <string name="adresse">Adresse :</string>
     <string name="telephone">Téléphone :</string>
     <string name="email">Email :</string>
+    <string name="oui">oui</string>
+    <string name="non">non</string>
+    <string name="repNon">non</string>
 
 </resources>
