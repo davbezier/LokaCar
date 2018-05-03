@@ -16,9 +16,11 @@ import java.util.List;
 public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapter.ViewHolder>{
 
     private List<Location> locationsVoituresLouees;
+    private CustomItemClickListener listener;
 
-    public VoitureLoueeAdapter(List<Location> locationsVoituresLouees) {
+    public VoitureLoueeAdapter(List<Location> locationsVoituresLouees, CustomItemClickListener listener) {
         this.locationsVoituresLouees = locationsVoituresLouees;
+        this.listener = listener;
     }
 
     @NonNull
@@ -28,6 +30,15 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
         View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.voitureloueesrecycler, parent,false);
 
         final ViewHolder holder = new ViewHolder(view);
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(listener != null) {
+                    listener.onItemClick(v, holder.getAdapterPosition());
+                }
+            }
+        });
 
         return holder;
 
@@ -94,6 +105,11 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
             nomClient = itemView.findViewById(R.id.nomClientLouee);
 
 
+
         }
+    }
+
+    public interface CustomItemClickListener{
+        public void onItemClick(View v, int position);
     }
 }

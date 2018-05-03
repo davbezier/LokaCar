@@ -8,6 +8,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.ecole.eni.lokacar.adapter.VoitureAdapter;
@@ -35,6 +36,7 @@ public class AfficherVoituresDisponiblesActivity extends AppCompatActivity {
         mVoitureDAL = new VoitureDAL(AfficherVoituresDisponiblesActivity.this);
 
         mVoitureList = mVoitureDAL.getAllVoiture();
+
 
         mVoitureAdapter = new VoitureAdapter(mVoitureList, new VoitureAdapter.CustomItemClickListener() {
             @Override

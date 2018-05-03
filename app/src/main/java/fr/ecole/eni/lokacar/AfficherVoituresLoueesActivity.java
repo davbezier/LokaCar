@@ -4,8 +4,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.ecole.eni.lokacar.adapter.VoitureLoueeAdapter;
@@ -29,12 +31,22 @@ public class AfficherVoituresLoueesActivity extends AppCompatActivity {
         locationDAL = new LocationDAL(AfficherVoituresLoueesActivity.this);
         locationsEnCours = locationDAL.getAllLocationsWithVoituresNonRendues();
 
+
         mRecyclerView = findViewById(R.id.liste_locations_encours);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(AfficherVoituresLoueesActivity.this);
 
         mRecyclerView.setLayoutManager(linearLayoutManager);
 
-        mVoitureLoueeAdapter = new VoitureLoueeAdapter(locationsEnCours);
+        mVoitureLoueeAdapter = new VoitureLoueeAdapter(locationsEnCours, new VoitureLoueeAdapter.CustomItemClickListener() {
+            @Override
+            public void onItemClick(View v, int position) {
+
+                Location location = locationsEnCours.get(position);
+
+                //update la location en voitures rendues
+
+            }
+        });
         mRecyclerView.setAdapter(mVoitureLoueeAdapter);
 
     }
