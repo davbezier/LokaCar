@@ -13,9 +13,12 @@ public abstract class LocationContract {
             + "PRIX_TOTAL REAL, "
             + "PHOTO_DEBUT TEXT, "
             + "PHOTO_FIN TEXT, "
+            + "IDCLIENT INTEGER, "
+            + "IDVOITURE INTEGER, "
+            + "ISRENDUE INTEGER, "
             + "FOREIGN KEY(IDCLIENT) REFERENCES CLIENTS(IDCLIENT), "
-            + "FOREIGN KEY(IDVOITURE) REFERENCES VOITURES(IDVOITURE), "
-            + "ISRENDUE INTEGER)";
+            + "FOREIGN KEY(IDVOITURE) REFERENCES VOITURES(IDVOITURE))";
+
 
     public final static String QUERY_DELETE_TABLE_LOCATIONS = "DROP TABLE IF EXISTS LOCATIONS";
     public final static String TABLE_LOCATIONS_NAME = "LOCATIONS";
