@@ -44,7 +44,8 @@ public class LocationDAL {
 
     public void update(long id, Location location) {
         SQLiteDatabase db = helper.getWritableDatabase();
-        db.update(LocationContract.TABLE_LOCATIONS_NAME, constructValuesDB(location), LocationContract.LOCATION_ID + "" + id, null);
+        String whereClauseLoc = LocationContract.LOCATION_ID + " = "+id;
+        db.update(LocationContract.TABLE_LOCATIONS_NAME, constructValuesDB(location), LocationContract.LOCATION_ID, null);
         db.close();
     }
 

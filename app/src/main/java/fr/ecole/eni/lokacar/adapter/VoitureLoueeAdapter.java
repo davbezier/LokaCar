@@ -1,12 +1,21 @@
 package fr.ecole.eni.lokacar.adapter;
 
+import android.app.Application;
+import android.content.Context;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
+
+import fr.ecole.eni.lokacar.AccueilActivity;
 import fr.ecole.eni.lokacar.R;
+import fr.ecole.eni.lokacar.dal.LocationDAL;
+import fr.ecole.eni.lokacar.dal.VoitureDAL;
 import fr.ecole.eni.lokacar.modeles.Location;
 
 import org.w3c.dom.Text;
@@ -16,11 +25,12 @@ import java.util.List;
 public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapter.ViewHolder>{
 
     private List<Location> locationsVoituresLouees;
-    private CustomItemClickListener listener;
+    private Context context;
 
-    public VoitureLoueeAdapter(List<Location> locationsVoituresLouees, CustomItemClickListener listener) {
+
+    public VoitureLoueeAdapter(List<Location> locationsVoituresLouees) {
         this.locationsVoituresLouees = locationsVoituresLouees;
-        this.listener = listener;
+
     }
 
     @NonNull
@@ -30,15 +40,7 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
         View view  = LayoutInflater.from(parent.getContext()).inflate(R.layout.voitureloueesrecycler, parent,false);
 
         final ViewHolder holder = new ViewHolder(view);
-
-        view.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if(listener != null) {
-                    listener.onItemClick(v, holder.getAdapterPosition());
-                }
-            }
-        });
+        context = parent.getContext();
 
         return holder;
 
@@ -47,7 +49,8 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
     @Override
     public void onBindViewHolder(@NonNull VoitureLoueeAdapter.ViewHolder holder, int position) {
 
-        Location location = locationsVoituresLouees.get(position);
+
+        final Location location = locationsVoituresLouees.get(position);
         holder.marque.setText(String.valueOf(location.getVoiture().getMarque()));
         holder.modele.setText(String.valueOf(location.getVoiture().getModele()));
         holder.type.setText(String.valueOf(location.getVoiture().getType()));
@@ -71,6 +74,19 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
         holder.nomClient.setText(String.valueOf(location.getClient().getNom()));
         holder.dateDebut.setText(String.valueOf(location.getDateDebut()));
         holder.dateFin.setText(String.valueOf(location.getDateFin()));
+        holder.btnRendreVoiture.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //update la location en placant voiturerendue=true;
+                LocationDAL locationDAL = new LocationDAL(context);
+                location.setRendu(true);
+                locationDAL.update(location.getIdLocation(), location);
+                Intent intent = new Intent(context, AccueilActivity.class);
+                v.getContext().startActivity(intent);
+
+
+            }
+        });
     }
 
     @Override
@@ -94,6 +110,7 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
         TextView nomClient;
         TextView dateDebut;
         TextView dateFin;
+        Button btnRendreVoiture;
 
 
         public ViewHolder(View itemView) {
@@ -111,11 +128,11 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
             nomClient = itemView.findViewById(R.id.nomClientLouee);
             dateDebut = itemView.findViewById(R.id.dateDebutVoitureLouee);
             dateFin = itemView.findViewById(R.id.dateFinVoitureLouee);
+            btnRendreVoiture = itemView.findViewById(R.id.btnRendreVoiture);
+
 
         }
     }
 
-    public interface CustomItemClickListener{
-        public void onItemClick(View v, int position);
-    }
+
 }
