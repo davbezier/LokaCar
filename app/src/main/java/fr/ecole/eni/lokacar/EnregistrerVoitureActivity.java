@@ -208,7 +208,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         }
 
         if (isFormCompleted) {
-            //on envoie l'objet en BDD
+            //on envoie l'objet voiture en BDD via requete asynchrone
             Voiture voiture = new Voiture(marque, modele, type, immatriculation, nbPlaces, nbPortes, motorisation, isClimatisation, isManuelle);
             Log.v("voiture", voiture.toString());
             InsertVoiture insertVoiture = new InsertVoiture();
