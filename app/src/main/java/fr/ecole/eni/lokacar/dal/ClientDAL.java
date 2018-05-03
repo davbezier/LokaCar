@@ -21,7 +21,6 @@ public class ClientDAL {
 
     private ContentValues mContentValues (Client client) {
         ContentValues values = new ContentValues();
-        values.put(ClientContract.CLIENTS_ID, client.getIdClient());
         values.put(ClientContract.NOM, client.getNom());
         values.put(ClientContract.PRENOM, client.getPrenom());
         values.put(ClientContract.ADRESSE, client.getAdresse());

@@ -42,7 +42,16 @@ public class AfficherVoituresDisponiblesActivity extends AppCompatActivity {
                 Voiture voiture = mVoitureList.get(position);
 
                 Intent intent = new Intent(AfficherVoituresDisponiblesActivity.this, EnregistrementClientActivity.class);
-                startActivityForResult(intent, 4);
+                intent.putExtra("nomVoitureLoc", voiture.getModele());
+                intent.putExtra("marqueVoitureLoc", voiture.getMarque());
+                intent.putExtra("typeVoitureLoc", voiture.getType());
+                intent.putExtra("immatriculationVoitureLoc", voiture.getImmatriculation());
+                intent.putExtra("nbPlaceVoitureLoc", voiture.getNbPlaces());
+                intent.putExtra("nbPorteVoitureLoc", voiture.getNbPortes());
+                intent.putExtra("motorisationVoitureLoc", voiture.getMotorisation());
+                intent.putExtra("climatisationVoitureLoc", voiture.isClimatisation());
+                intent.putExtra("manuelVoitureLoc", voiture.isManuel());
+                startActivity(intent);
             }
         });
 

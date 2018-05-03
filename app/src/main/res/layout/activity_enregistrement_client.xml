@@ -12,13 +12,50 @@
         android:gravity="center_horizontal"
         android:text="@string/enregistrement_client" />
 
-    <TextView
-        android:id="@+id/nom_voiture"
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:text="@string/voiture"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/marqueVoitureClientSaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/marqueClientSaved" />
+
+        <TextView
+            android:id="@+id/nom_voiture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.3"
+            android:layout_marginEnd="5dp"
+            android:gravity="center_horizontal"
+            android:text="@string/voiture" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/immatriculationVoitureClientSaved"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@string/immatriculationClientSaved"/>
+
+    </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -161,6 +198,7 @@
             android:id="@+id/enregistrer_location"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="onBtnEnregistrerLocationClient"
             android:text="@string/enregistrer"/>
 
     </LinearLayout>

@@ -41,6 +41,8 @@
     <string name="motorisationLabelCard">Motorisation :</string>
     <string name="climatisationLabelCard">Climatisation :</string>
     <string name="boite_de_vitesseLabelCard">Boite de vitesse :</string>
+    <string name="marqueClientSaved">Marque</string>
+    <string name="immatriculationClientSaved">Immatriculation</string>
 
 
 </resources>
