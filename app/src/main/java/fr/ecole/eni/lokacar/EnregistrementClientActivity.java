@@ -12,18 +12,19 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Button;
+
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.ecole.eni.lokacar.dal.ClientDAL;
 import fr.ecole.eni.lokacar.modeles.Client;
+import fr.ecole.eni.lokacar.modeles.Location;
 import fr.ecole.eni.lokacar.modeles.Voiture;
 
 public class EnregistrementClientActivity extends AppCompatActivity {
@@ -49,6 +50,7 @@ public class EnregistrementClientActivity extends AppCompatActivity {
     private String clientAdresse;
     private String clientTelephone;
     private String clientEmail;
+    private Client mClient;
 
 
     @Override
@@ -79,6 +81,8 @@ public class EnregistrementClientActivity extends AppCompatActivity {
             immatriculationVoiture = (String) savedInstanceState.getSerializable("immatriculationVoitureLoc");
         }
 
+        mVoiture = (Voiture) getIntent().getParcelableExtra("objetVoiture");
+
         mTextNomVoiture.setText(modeleVoiture);
         mTextMarqueVoiture.setText(marqueVoiture);
         mTextImmatriculationVoiture.setText(immatriculationVoiture);
@@ -90,8 +94,14 @@ public class EnregistrementClientActivity extends AppCompatActivity {
 
         mClientList = clientDAL.getAllClient();
 
-        ArrayAdapter<Client> clientArrayAdapter = new ArrayAdapter<Client>(EnregistrementClientActivity.this,
-                android.R.layout.simple_spinner_item, mClientList);
+        List<String> listeNomClient = new ArrayList<>();
+
+        for (Client client : mClientList) {
+            listeNomClient.add(client.getNom());
+        }
+
+        ArrayAdapter<String> clientArrayAdapter = new ArrayAdapter<String>(EnregistrementClientActivity.this,
+                android.R.layout.simple_spinner_item, listeNomClient);
 
         clientArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
@@ -184,10 +194,9 @@ public class EnregistrementClientActivity extends AppCompatActivity {
         }
 
         if (isFormClientCompleted) {
-            Client client = new Client(clientNom, clientPrenom, clientAdresse, clientTelephone, clientEmail);
-            Log.v("client", client.toString());
+            mClient = new Client(clientNom, clientPrenom, clientAdresse, clientTelephone, clientEmail);
             InsertClient insertClient = new InsertClient();
-            insertClient.execute(client);
+            insertClient.execute(mClient);
 
         } else {
             Log.v("client", "problème");
@@ -201,7 +210,10 @@ public class EnregistrementClientActivity extends AppCompatActivity {
         @Override
         protected Boolean doInBackground(Client... clients) {
             try{
-                mClientDAL.insertClient(clients[0]);
+
+               long idClient = mClientDAL.insertClient(clients[0]);
+               mClient.setIdClient(idClient);
+
                 return true;
             }catch (Exception e){
                 return false;
@@ -222,19 +234,21 @@ public class EnregistrementClientActivity extends AppCompatActivity {
                     builder = new AlertDialog.Builder(EnregistrementClientActivity.this);
                 }
                 builder.setTitle("Réussi")
-                        .setMessage("La location a bien été prise en compte")
+                        .setMessage("L'enregistrement du client a bien été prise en compte, vous allez passer à l'enregistrement de la location")
                         .setNeutralButton("OK", new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 EnregistrementClientActivity.this.finish();
-                                Intent intent = new Intent(EnregistrementClientActivity.this, AccueilActivity.class);
+                                Intent intent = new Intent(EnregistrementClientActivity.this, LocationActivity.class);
+                                intent.putExtra("objetClient", mClient);
+                                intent.putExtra("voitureObjet", mVoiture);
                                 startActivity(intent);
                             }
                         })
                         .setIcon(android.R.drawable.ic_dialog_info)
                         .show();
             } else {
-                Toast toast = Toast.makeText(EnregistrementClientActivity.this, "Problème lors de l'enregistrement de la location", Toast.LENGTH_LONG);
+                Toast toast = Toast.makeText(EnregistrementClientActivity.this, "Problème lors de l'enregistrement du client", Toast.LENGTH_LONG);
                 toast.show();
             }
         }

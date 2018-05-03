@@ -35,7 +35,7 @@ public class AfficherVoituresDisponiblesActivity extends AppCompatActivity {
 
         mVoitureDAL = new VoitureDAL(AfficherVoituresDisponiblesActivity.this);
 
-        mVoitureList = mVoitureDAL.getAllVoiture();
+        mVoitureList = mVoitureDAL.getAllvoituresNonLouees();
 
 
         mVoitureAdapter = new VoitureAdapter(mVoitureList, new VoitureAdapter.CustomItemClickListener() {
@@ -53,6 +53,7 @@ public class AfficherVoituresDisponiblesActivity extends AppCompatActivity {
                 intent.putExtra("motorisationVoitureLoc", voiture.getMotorisation());
                 intent.putExtra("climatisationVoitureLoc", voiture.isClimatisation());
                 intent.putExtra("manuelVoitureLoc", voiture.isManuel());
+                intent.putExtra("objetVoiture", voiture);
                 startActivity(intent);
             }
         });

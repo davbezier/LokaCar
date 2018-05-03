@@ -56,15 +56,15 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
         holder.nbPortes.setText(String.valueOf(location.getVoiture().getNbPortes()));
         holder.motorisation.setText(String.valueOf(location.getVoiture().getMotorisation()));
         if (location.getVoiture().isClimatisation()){
-            holder.climatisation.setText(String.valueOf("oui"));
+            holder.climatisation.setText(String.valueOf("Non"));
         } else{
-            holder.climatisation.setText(String.valueOf("non"));
+            holder.climatisation.setText(String.valueOf("Oui"));
         }
 
         if(location.getVoiture().isManuel()){
-            holder.isManuel.setText(String.valueOf("Manuelle"));
-        }else{
             holder.isManuel.setText(String.valueOf("Automatique"));
+        }else{
+            holder.isManuel.setText(String.valueOf("Manuelle"));
         }
 
     }

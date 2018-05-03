@@ -43,6 +43,18 @@
     <string name="boite_de_vitesseLabelCard">Boite de vitesse :</string>
     <string name="marqueClientSaved">Marque</string>
     <string name="immatriculationClientSaved">Immatriculation</string>
+    <string name="enregistrement_d_une_location">Enregistrement d\'une location</string>
+    <string name="date_de_debut">Date de début :</string>
+    <string name="date_de_fin">Date de fin :</string>
+    <string name="prix_total">Prix total :</string>
+    <string name="prix_calcule">prix calculé</string>
+    <string name="client_location">Client :</string>
+    <string name="nom_du_client">Nom du client</string>
+    <string name="voiture_louee">Voiture :</string>
+    <string name="marque_voiture">Marque voiture</string>
+    <string name="modele_voiture">Modele voiture</string>
+    <string name="enregistrer_location">Enregistrer</string>
+    <string name="photo">Photo</string>
 
 
 </resources>

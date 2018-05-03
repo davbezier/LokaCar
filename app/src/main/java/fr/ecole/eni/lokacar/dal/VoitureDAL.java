@@ -107,17 +107,27 @@ public class VoitureDAL {
 
         List<Location> allLocationsVoituresLouees = locationDAL.getAllLocationsWithVoituresNonRendues();
 
-        for (Voiture voiture : allVoitures){
 
-           for(Location location : allLocationsVoituresLouees){
 
-               if (voiture.getIdVoiture() != location.getVoiture().getIdVoiture()){
-                   allVoituresNonLouees.add(voiture);
-               }
-           }
+        if (!allLocationsVoituresLouees.isEmpty()){
+
+            for (Voiture voiture : allVoitures){
+
+                for(Location location : allLocationsVoituresLouees){
+
+                    if (voiture.getIdVoiture() != location.getVoiture().getIdVoiture()){
+                        allVoituresNonLouees.add(voiture);
+                    }
+                }
+            }
+
+            return allVoituresNonLouees;
+        } else{
+
+            return getAllVoiture();
         }
 
-        return  allVoituresNonLouees;
+
     }
 
 

@@ -50,7 +50,7 @@ public class LoginActivity extends AppCompatActivity {
        // mGerant = new Gerant("gerant1", "mdp", "Nantes");
 
         mGerantDAL = new GerantDAL(LoginActivity.this);
-      //  mGerantDAL.insertGerant(mGerant);
+       // mGerantDAL.insertGerant(mGerant);
 
         mLoginView = (AutoCompleteTextView) findViewById(R.id.login);
         mPasswordView = (EditText) findViewById(R.id.password);

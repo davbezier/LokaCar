@@ -30,7 +30,7 @@ public class Client implements Parcelable{
     }
 
     protected Client(Parcel in) {
-        idClient = in.readInt();
+        idClient = in.readLong();
         nom = in.readString();
         prenom = in.readString();
         adresse = in.readString();

@@ -52,6 +52,15 @@ public class Location implements Parcelable {
         isRendu = in.readByte() != 0;
     }
 
+    public Location(String dateDebut, String dateFin, double prixTotal, Client client, Voiture voiture, boolean isRendu) {
+        this.dateDebut = dateDebut;
+        this.dateFin = dateFin;
+        this.prixTotal = prixTotal;
+        this.client = client;
+        this.voiture = voiture;
+        this.isRendu = isRendu;
+    }
+
     public static final Creator<Location> CREATOR = new Creator<Location>() {
         @Override
         public Location createFromParcel(Parcel in) {

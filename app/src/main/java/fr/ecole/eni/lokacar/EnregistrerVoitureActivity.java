@@ -225,8 +225,7 @@ public class EnregistrerVoitureActivity extends AppCompatActivity {
         boolean checked = ((RadioButton) view).isChecked();
 
         switch (view.getId()) {
-            case R.id.radio_3portes:
-                if (checked)
+            case R.id.radio_3portes:                if (checked)
                     nbPortes = 3;
                 break;
             case R.id.radio_5portes:
