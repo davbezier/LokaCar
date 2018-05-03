@@ -46,17 +46,17 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-<<<<<<< Updated upstream
+
        //mGerant = new Gerant("gerant1", "mdp", "Nantes");
 
         mGerantDAL = new GerantDAL(LoginActivity.this);
         //mGerantDAL.insertGerant(mGerant);
-=======
-        mGerant = new Gerant("gerant1", "mdp", "Nantes");
 
-        mGerantDAL = new GerantDAL(LoginActivity.this);
-        mGerantDAL.insertGerant(mGerant);
->>>>>>> Stashed changes
+
+
+
+      //  mGerantDAL.insertGerant(mGerant);
+
 
 
         mLoginView = (AutoCompleteTextView) findViewById(R.id.login);

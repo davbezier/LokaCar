@@ -10,16 +10,14 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Liste des véhicules loués"/>
+        android:layout_marginBottom="20dp"
+        android:text="Voitures louées"/>
 
-    <ListView
-        android:id="@+id/liste_voitures_louees"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/liste_locations_encours"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp">
+        android:layout_height="match_parent">
 
-    </ListView>
+    </android.support.v7.widget.RecyclerView>
 
 </LinearLayout>

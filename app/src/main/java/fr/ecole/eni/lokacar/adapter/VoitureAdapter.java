@@ -66,7 +66,6 @@ public class VoitureAdapter extends RecyclerView.Adapter<VoitureAdapter.ViewHold
             holder.isManuelV.setText(String.valueOf("Automatique"));
         }
 
-
     }
 
     @Override
