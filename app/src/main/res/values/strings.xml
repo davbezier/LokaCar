@@ -34,6 +34,13 @@
     <string name="motorisation">Motorisation</string>
     <string name="climatisation">Climatisation</string>
     <string name="boite_de_vitesse">Boite de vitesse</string>
+    <string name="typeLabelCard">Type :</string>
+    <string name="immatriculationLabelCard">Immatriculation :</string>
+    <string name="nombre_de_placesLabelCard">Nombre de places :</string>
+    <string name="nombre_de_portesLabelCard">Nombre de portes :</string>
+    <string name="motorisationLabelCard">Motorisation :</string>
+    <string name="climatisationLabelCard">Climatisation :</string>
+    <string name="boite_de_vitesseLabelCard">Boite de vitesse :</string>
 
 
 </resources>

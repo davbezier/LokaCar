@@ -42,7 +42,7 @@ public class AfficherVoituresDisponiblesActivity extends AppCompatActivity {
                 Voiture voiture = mVoitureList.get(position);
 
                 Intent intent = new Intent(AfficherVoituresDisponiblesActivity.this, EnregistrementClientActivity.class);
-                startActivityForResult(intent, position);
+                startActivityForResult(intent, 4);
             }
         });
 

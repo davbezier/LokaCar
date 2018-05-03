@@ -22,7 +22,7 @@ public class Helper extends SQLiteOpenHelper {
         db.execSQL(GerantContract.GERANT_CREATE_TABLE);
         db.execSQL(VoitureContract.VOITURE_CREATE_TABLE);
         db.execSQL(ClientContract.CLIENT_CREATE_TABLE);
-        db.execSQL(LocationContract.LOCATION_CREATE_TABLE);
+       // db.execSQL(LocationContract.LOCATION_CREATE_TABLE);
     }
 
     @Override
@@ -30,7 +30,7 @@ public class Helper extends SQLiteOpenHelper {
         db.execSQL(GerantContract.QUERY_DELETE_TABLE_GERANT);
         db.execSQL(VoitureContract.QUERY_DELETE_TABLE_VOITURES);
         db.execSQL(ClientContract.QUERY_DELETE_TABLE_CLIENT);
-        db.execSQL(LocationContract.QUERY_DELETE_TABLE_LOCATIONS);
+       // db.execSQL(LocationContract.QUERY_DELETE_TABLE_LOCATIONS);
         onCreate(db);
     }
 }

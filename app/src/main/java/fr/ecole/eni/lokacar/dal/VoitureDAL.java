@@ -81,8 +81,8 @@ public class VoitureDAL {
                 int nbPlaceVoiture = cursor.getInt(cursor.getColumnIndex(VoitureContract.NBPLACES));
                 int nbPorteVoiture = cursor.getInt(cursor.getColumnIndex(VoitureContract.NBPORTES));
                 String motorisationVoiture = cursor.getString(cursor.getColumnIndex(VoitureContract.MOTORISATION));
-                boolean climatisationVoiture = (cursor.getInt(cursor.getColumnIndex(VoitureContract.CLIMATISATION))>1);
-                boolean isManuel = (cursor.getInt(cursor.getColumnIndex(VoitureContract.ISMANUEL))>1);
+                boolean climatisationVoiture = (cursor.getInt(cursor.getColumnIndex(VoitureContract.CLIMATISATION))>0);
+                boolean isManuel = (cursor.getInt(cursor.getColumnIndex(VoitureContract.ISMANUEL))>0);
 
                 objects.add(new Voiture(id, marqueVoiture,
                         modeleVoiture, typeVoiture,

@@ -14,12 +14,12 @@ import fr.ecole.eni.lokacar.modeles.Voiture;
 
 public class VoitureAdapter extends RecyclerView.Adapter<VoitureAdapter.ViewHolder> {
 
-    private List<Voiture> data;
+    private List<Voiture> mVoitureList;
     private CustomItemClickListener listener;
 
 
-    public VoitureAdapter(List<Voiture> data, CustomItemClickListener listener) {
-        this.data = data;
+    public VoitureAdapter(List<Voiture> mVoitureList, CustomItemClickListener listener) {
+        this.mVoitureList = mVoitureList;
         this.listener = listener;
     }
 
@@ -40,54 +40,64 @@ public class VoitureAdapter extends RecyclerView.Adapter<VoitureAdapter.ViewHold
            }
        });
 
-        return null;
+        return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
-        Voiture voiture = data.get(position);
-        holder.marqueVoiture.setText(String.valueOf(voiture.getMarque()));
-        holder.modeleVoiture.setText(String.valueOf(voiture.getModele()));
-        holder.typeVoiture.setText(String.valueOf(voiture.getType()));
-        holder.immatriculationVoiture.setText(String.valueOf(voiture.getImmatriculation()));
-        holder.nbPlaceVoiture.setText(String.valueOf(voiture.getNbPlaces()));
-        holder.nbPorteVoiture.setText(String.valueOf(voiture.getNbPortes()));
-        holder.motorisationVoiture.setText(String.valueOf(voiture.getMotorisation()));
-        holder.climatisationVoiture.setText(String.valueOf(voiture.isClimatisation()));
-        holder.isManuel.setText(String.valueOf(voiture.isManuel()));
+        Voiture voiture = mVoitureList.get(position);
+        holder.marque.setText(String.valueOf(voiture.getMarque()));
+        holder.modele.setText(String.valueOf(voiture.getModele()));
+        holder.type.setText(String.valueOf(voiture.getType()));
+        holder.immatriculation.setText(String.valueOf(voiture.getImmatriculation()));
+        holder.nbPlace.setText(String.valueOf(voiture.getNbPlaces()));
+        holder.nbPorte.setText(String.valueOf(voiture.getNbPortes()));
+        holder.motorisation.setText(String.valueOf(voiture.getMotorisation()));
+        if (voiture.isClimatisation()){
+            holder.climatisation.setText(String.valueOf("Oui"));
+        } else {
+            holder.climatisation.setText(String.valueOf("Non"));
+        }
+
+        if (voiture.isManuel()) {
+            holder.isManuelV.setText(String.valueOf("Manuelle"));
+        } else {
+            holder.isManuelV.setText(String.valueOf("Automatique"));
+        }
+
 
     }
 
     @Override
     public int getItemCount() {
-        return data.size();
+        return mVoitureList.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder{
 
-        TextView marqueVoiture;
-        TextView modeleVoiture;
-        TextView typeVoiture;
-        TextView immatriculationVoiture;
-        TextView nbPlaceVoiture;
-        TextView nbPorteVoiture;
-        TextView motorisationVoiture;
-        TextView climatisationVoiture;
-        TextView isManuel;
+        TextView marque;
+        TextView modele;
+        TextView type;
+        TextView immatriculation;
+        TextView nbPlace;
+        TextView nbPorte;
+        TextView motorisation;
+        TextView climatisation;
+        TextView isManuelV;
 
         public ViewHolder(View itemView) {
             super(itemView);
 
-            marqueVoiture = itemView.findViewById(R.id.marqueVoiture);
-            modeleVoiture = itemView.findViewById(R.id.modeleVoiture);
-            typeVoiture = itemView.findViewById(R.id.typeVoiture);
-            immatriculationVoiture = itemView.findViewById(R.id.immatriculationVoiture);
-            nbPlaceVoiture = itemView.findViewById(R.id.nbPlaceVoiture);
-            nbPorteVoiture = itemView.findViewById(R.id.nbPorteVoiture);
-            motorisationVoiture = itemView.findViewById(R.id.motorisationVoiture);
-            climatisationVoiture = itemView.findViewById(R.id.climatisationVoiture);
-            isManuel = itemView.findViewById(R.id.isManuel);
+            marque = itemView.findViewById(R.id.marqueVoiture);
+            modele = itemView.findViewById(R.id.modeleVoiture);
+            type = itemView.findViewById(R.id.typeVoiture);
+            immatriculation = itemView.findViewById(R.id.immatriculationVoiture);
+            nbPlace = itemView.findViewById(R.id.nbPlaceVoiture);
+            nbPorte = itemView.findViewById(R.id.nbPorteVoiture);
+            motorisation = itemView.findViewById(R.id.motorisationVoiture);
+            climatisation = itemView.findViewById(R.id.climatisationVoiture);
+            isManuelV = itemView.findViewById(R.id.isManuel);
 
         }
     }
