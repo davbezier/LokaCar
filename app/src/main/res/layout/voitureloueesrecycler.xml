@@ -189,37 +189,84 @@
     </LinearLayout>
 
     <LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_marginTop="205dp"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:hint="Client :"
+        android:layout_weight="0.2"/>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/prenomClientLouee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"/>
+
+    <TextView
+        android:layout_marginLeft="5dp"
+        android:id="@+id/nomClientLouee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.4"/>
+
+</LinearLayout>
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="205dp"
+        android:layout_marginTop="225dp"
         android:padding="10dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"
-            android:hint="Client :"
+            android:hint="date de début de location :"
             android:layout_weight="0.2"/>
 
         <TextView
-            android:id="@+id/prenomClientLouee"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/dateDebutVoitureLouee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="prenomClient"
             android:layout_weight="0.4"/>
 
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="245dp"
+        android:padding="10dp">
+
         <TextView
-            android:id="@+id/nomClientLouee"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:hint="nomClient"
+            android:layout_marginBottom="5dp"
+            android:hint="date de fin de location :"
+            android:layout_weight="0.2"/>
+
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:id="@+id/dateFinVoitureLouee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_weight="0.4"/>
 
     </LinearLayout>
     <Button
 
-        android:layout_marginTop="240dp"
+        android:layout_marginTop="275dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btnRendreVoiture"

@@ -67,6 +67,10 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
             holder.isManuel.setText(String.valueOf("Manuelle"));
         }
 
+        holder.prenomClient.setText(String.valueOf(location.getClient().getPrenom()));
+        holder.nomClient.setText(String.valueOf(location.getClient().getNom()));
+        holder.dateDebut.setText(String.valueOf(location.getDateDebut()));
+        holder.dateFin.setText(String.valueOf(location.getDateFin()));
     }
 
     @Override
@@ -88,6 +92,8 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
         TextView isManuel;
         TextView prenomClient;
         TextView nomClient;
+        TextView dateDebut;
+        TextView dateFin;
 
 
         public ViewHolder(View itemView) {
@@ -103,8 +109,8 @@ public class VoitureLoueeAdapter extends RecyclerView.Adapter<VoitureLoueeAdapte
             isManuel = itemView.findViewById(R.id.isManuellouee);
             prenomClient = itemView.findViewById(R.id.prenomClientLouee);
             nomClient = itemView.findViewById(R.id.nomClientLouee);
-
-
+            dateDebut = itemView.findViewById(R.id.dateDebutVoitureLouee);
+            dateFin = itemView.findViewById(R.id.dateFinVoitureLouee);
 
         }
     }

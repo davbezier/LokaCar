@@ -45,12 +45,10 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+       mGerant = new Gerant("gerant1", "mdp", "Nantes");
 
-
-       // mGerant = new Gerant("gerant1", "mdp", "Nantes");
-
-        mGerantDAL = new GerantDAL(LoginActivity.this);
-       // mGerantDAL.insertGerant(mGerant);
+       mGerantDAL = new GerantDAL(LoginActivity.this);
+       mGerantDAL.insertGerant(mGerant);
 
         mLoginView = (AutoCompleteTextView) findViewById(R.id.login);
         mPasswordView = (EditText) findViewById(R.id.password);
